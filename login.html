@@ -17,10 +17,14 @@
         <img src="./img/password.png" alt="">
         <input placeholder="密码" id="password" type="password">
     </div>
-
-    <span class="btn-submit">
+    <span class="btn-submit" onclick=javascript:jump()>
         <input type="submit" value="登 录">
     </span>
 </div>
+<script>
+    function jump() {
+        window.location.href = "http://localhost:63343/EmailManage/index.html";
+    }
+</script>
 </body>
 </html>
