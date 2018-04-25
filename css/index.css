@@ -26,9 +26,9 @@ body {
 }
 
 .logo img {
-    width: 45px;
-    height: 45px;
-    padding: 20px;
+    width: 60px;
+    height: 60px;
+    padding: 42px;
 }
 
 ul {
@@ -73,21 +73,29 @@ ul li span {
 }
 
 .receiver-layout h2,
-.receiveGroup-layout h2,
-.message-layout h2{
+.receiverGroup-layout h2,
+.message-layout h2,
+.task-layout h2,
+.emailTransmitter-layout h2,
+.addAdministrators h2{
     margin: 50px 0 30px 50px;
     font-weight: lighter;
 }
 
 .receiver-layout label,
-.receiveGroup-layout label,
-.message-layout label{
+.receiverGroup-layout label,
+.message-layout label,
+.task-layout label{
     margin: 0 0 0 50px;
 }
-
+.administrators-layout .label-first{
+    margin: 0 0 0 50px;
+}
 .receiver-layout input,
-.receiveGroup-layout input,
-.message-layout input{
+.receiverGroup-layout input,
+.message-layout input,
+.task-layout input,
+.administrators-layout input{
     margin: 10px;
     padding: 5px;
     border: 1px solid rgba(25, 137, 250, .4);
@@ -96,8 +104,10 @@ ul li span {
 }
 
 .receiver-layout button,
-.receiveGroup-layout button,
-.message-layout button{
+.receiverGroup-layout button,
+.message-layout button,
+.task-layout button,
+.administrators-layout button{
     margin: 0 50px;
     padding: 7px 15px;
     border: 1px solid rgba(25, 137, 250, .4);
@@ -108,54 +118,82 @@ ul li span {
 }
 
 .receiver-layout button:hover,
-.receiveGroup-layout button:hover,
-.message-layout button:hover{
+.receiverGroup-layout button:hover,
+.message-layout button:hover,
+.task-layout button:hover,
+.administrators-layout button:hover{
     background: #1989FA;
     color: white;
 }
 
 .addReceiver,
 .manageGroup,
-.addMessage{
+.addMessage,
+.publishTask,
+.addAdministrators{
     padding-bottom: 40px;
     border-bottom: 1px solid #ccc;
 }
 
 .receiverContent,
-.messageContent{
+.messageContent,
+.taskContent,
+.emailTransmitterContent,
+.administratorsContent{
     margin: 50px;
 }
 
 .receiverContent .name-td, .email-td,.operate-td,
-.messageContent .name-td,.operate-td{
+.messageContent .name-td,.operate-td,
+.taskContent .name-td, .email-td,.operate-td,
+.emailTransmitterContent .name-td, .email-td,.operate-td,
+.administratorsContent .name-td,.operate-td{
     font-weight: 500;
     padding-right: 300px;
     padding-bottom: 30px;
 }
 
-.receiverContent .name-td{
+.receiverContent .name-td,
+.taskContent .name-td{
     padding-right: 200px;
 }
-.messageContent .name-td{
+.messageContent .name-td,
+.administratorsContent .name-td{
     padding-right: 300px;
 }
 
 .receiverContent td,
-.messageContent td{
+.messageContent td,
+.taskContent td,
+.emailTransmitterContent td,
+.administratorsContent td{
     padding: 10px 0;
     border-bottom: 1px solid #ccc;
 }
 
 .receiverContent td span,
-.messageContent td span{
+.messageContent td span,
+.taskContent td span,
+.emailTransmitterContent td span,
+.administratorsContent td span{
     cursor: pointer;
 }
 .receiverContent td .edit:hover,
-.messageContent td .edit:hover{
+.messageContent td .edit:hover,
+.taskContent td .edit:hover,
+.emailTransmitterContent td .reset:hover,
+.administratorsContent td .edit:hover{
    color: #1989FA;
 }
 
 .receiverContent td .delete:hover,
-.messageContent td .delete:hover{
+.messageContent td .delete:hover,
+.taskContent td .delete:hover,
+.emailTransmitterContent td .stop:hover,
+.administratorsContent td .edit:hover{
     color: #e55c5c;
+}
+
+.emailTransmitterContent td .wait:hover{
+    color: #8a8a8a;
 }

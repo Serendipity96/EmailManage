@@ -8,7 +8,7 @@
 <body>
 <div class="sidebar">
     <div class="logo">
-        <img src="./img/logo.png" alt="">
+        <img src="./img/csust.png" alt="">
     </div>
     <ul>
         <li id="receiver" class="active">
@@ -16,18 +16,17 @@
             <span>接受者管理</span>
         </li>
         <li id="receiverGroup"><img src="./img/team.png" alt=""><span>接受组管理</span></li>
-        <li><img src="./img/message.png" alt=""><span>消息管理</span></li>
-        <li><img src="./img/publish.png" alt=""><span>发布任务</span></li>
-        <li><img src="./img/email.png" alt=""><span>邮件发送器</span></li>
-        <li><img src="./img/manager.png" alt=""><span>管理员账户</span></li>
+        <li id="message"><img src="./img/message.png" alt=""><span>消息管理</span></li>
+        <li id="task"><img src="./img/publish.png" alt=""><span>发布任务</span></li>
+        <li id="emailTransmitter"><img src="./img/email.png" alt=""><span>邮件发送器</span></li>
+        <li id="administrators"><img src="./img/manager.png" alt=""><span>管理员账户</span></li>
     </ul>
     <div class="author">
         <p>长沙理工大学-软件1XX1班-XXX</p>
     </div>
-
 </div>
 <div class="layout">
-    <div class="receiver-layout" style="display: none;">
+    <div class="receiver-layout" style="display: block;">
         <div class="addReceiver">
             <h2>添加接受者</h2>
             <label for="">
@@ -69,7 +68,7 @@
             </table>
         </div>
     </div>
-    <div class="receiveGroup-layout" style="display: none;">
+    <div class="receiverGroup-layout" style="display: none;">
         <div class="manageGroup">
             <h2>接受组管理</h2>
             <label for="">
@@ -130,6 +129,143 @@
                 </tr>
                 <tr>
                     <td>再见</td>
+                    <td><span class="edit">修改</span>/<span class="delete">删除</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="task-layout" style="display: none">
+        <div class="publishTask">
+            <h2>发布任务</h2>
+            <div class="row">
+                <label for="">
+                    任务名称
+                    <input type="text">
+                </label>
+                <label for="">
+                    发送消息
+                    <input type="text">
+                </label>
+                <label for="">
+                    Cron
+                    <input type="text">
+                </label>
+            </div>
+            <div class="row">
+                <label for="">
+                    指派发送器
+                    <select>
+                        <option value ="volvo" selected>A</option>
+                        <option value ="saab">B</option>
+                        <option value="opel">C</option>
+                        <option value="audi">D</option>
+                    </select>
+                </label>
+                <label for="">
+                    不接收消息的组
+                    <select multiple>
+                        <option value ="volvo" selected>A</option>
+                        <option value ="saab">B</option>
+                        <option value="opel">C</option>
+
+                    </select>
+                </label>
+                <label for="">
+                    接收消息的组
+                    <select multiple>
+                        <option value ="volvo">A</option>
+                        <option value ="saab">B</option>
+                        <option value="opel">C</option>
+                    </select>
+                </label>
+                <button type="submit">添加</button>
+            </div>
+
+
+        </div>
+        <div class="taskContent">
+            <table>
+                <thead>
+                <tr>
+                    <th class="name-td">任务名</th>
+                    <th class="email-td">状态</th>
+                    <th class="operate-td">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>摸鱼通知</td>
+                    <td>成功 5 次</td>
+                    <td><span class="edit">修改</span>/<span class="delete">删除</span></td>
+                </tr>
+                <tr>
+                    <td>变咸通知</td>
+                    <td>失败 3 次</td>
+                    <td><span class="edit">修改</span>/<span class="delete">删除</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="emailTransmitter-layout" style="display: none">
+        <h2>邮件发送器</h2>
+        <div class="emailTransmitterContent">
+            <table>
+                <thead>
+                <tr>
+                    <th class="name-td">IP</th>
+                    <th class="email-td">状态</th>
+                    <th class="operate-td">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>127.0.0.1</td>
+                    <td>在线</td>
+                    <td><span class="stop">停止</span>/<span class="wait">暂停</span>/<span class="reset">重启</span></td>
+                </tr>
+                <tr>
+                    <td>10.28.64.1</td>
+                    <td>在线</td>
+                    <td><span class="stop">停止</span>/<span class="wait">暂停</span>/<span class="reset">重启</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="administrators-layout" style="display: none">
+        <div class="addAdministrators">
+            <h2>管理员账号</h2>
+            <label class="label-first" for="">
+                用户名
+                <input type="text">
+            </label>
+            <label for="">
+                密码
+                <input type="password">
+            </label>
+            <label for="">
+                确认密码
+                <input type="password">
+            </label>
+            <button type="submit">添加</button>
+        </div>
+        <div class="administratorsContent">
+            <table>
+                <thead>
+                <tr>
+                    <th class="name-td">用户名</th>
+                    <th class="operate-td">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>admin</td>
+                    <td><span class="edit">修改</span>/<span class="delete">删除</span></td>
+                </tr>
+                <tr>
+                    <td>user</td>
                     <td><span class="edit">修改</span>/<span class="delete">删除</span></td>
                 </tr>
                 </tbody>
