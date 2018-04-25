@@ -7,6 +7,10 @@ li {
     list-style: none;
 }
 
+body {
+    display: flex;
+}
+
 .sidebar {
     width: 230px;
     height: 100vh;
@@ -26,9 +30,11 @@ li {
     height: 45px;
     padding: 20px;
 }
-ul{
+
+ul {
     flex-grow: 1;
 }
+
 ul li {
     height: 60px;
     position: relative;
@@ -53,10 +59,103 @@ ul li span {
     color: black;
 }
 
-.author{
+.author {
     text-align: center;
 }
+
 .author p {
     font-size: 12px;
     padding: 15px;
+}
+
+.layout {
+    flex-grow: 1;
+}
+
+.receiver-layout h2,
+.receiveGroup-layout h2,
+.message-layout h2{
+    margin: 50px 0 30px 50px;
+    font-weight: lighter;
+}
+
+.receiver-layout label,
+.receiveGroup-layout label,
+.message-layout label{
+    margin: 0 0 0 50px;
+}
+
+.receiver-layout input,
+.receiveGroup-layout input,
+.message-layout input{
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid rgba(25, 137, 250, .4);
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.receiver-layout button,
+.receiveGroup-layout button,
+.message-layout button{
+    margin: 0 50px;
+    padding: 7px 15px;
+    border: 1px solid rgba(25, 137, 250, .4);
+    border-radius: 5px;
+    background: #fff;
+    color: #1989FA;
+    cursor: pointer;
+}
+
+.receiver-layout button:hover,
+.receiveGroup-layout button:hover,
+.message-layout button:hover{
+    background: #1989FA;
+    color: white;
+}
+
+.addReceiver,
+.manageGroup,
+.addMessage{
+    padding-bottom: 40px;
+    border-bottom: 1px solid #ccc;
+}
+
+.receiverContent,
+.messageContent{
+    margin: 50px;
+}
+
+.receiverContent .name-td, .email-td,.operate-td,
+.messageContent .name-td,.operate-td{
+    font-weight: 500;
+    padding-right: 300px;
+    padding-bottom: 30px;
+}
+
+.receiverContent .name-td{
+    padding-right: 200px;
+}
+.messageContent .name-td{
+    padding-right: 300px;
+}
+
+.receiverContent td,
+.messageContent td{
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.receiverContent td span,
+.messageContent td span{
+    cursor: pointer;
+}
+.receiverContent td .edit:hover,
+.messageContent td .edit:hover{
+   color: #1989FA;
+}
+
+.receiverContent td .delete:hover,
+.messageContent td .delete:hover{
+    color: #e55c5c;
 }

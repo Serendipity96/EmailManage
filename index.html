@@ -11,11 +11,11 @@
         <img src="./img/logo.png" alt="">
     </div>
     <ul>
-        <li class="active">
+        <li id="receiver" class="active">
             <img src="./img/receive.png" alt="">
             <span>接受者管理</span>
         </li>
-        <li><img src="./img/team.png" alt=""><span>接受组管理</span></li>
+        <li id="receiverGroup"><img src="./img/team.png" alt=""><span>接受组管理</span></li>
         <li><img src="./img/message.png" alt=""><span>消息管理</span></li>
         <li><img src="./img/publish.png" alt=""><span>发布任务</span></li>
         <li><img src="./img/email.png" alt=""><span>邮件发送器</span></li>
@@ -26,6 +26,118 @@
     </div>
 
 </div>
+<div class="layout">
+    <div class="receiver-layout" style="display: none;">
+        <div class="addReceiver">
+            <h2>添加接受者</h2>
+            <label for="">
+                姓名
+                <input type="text">
+            </label>
+            <label for="">
+                Email
+                <input type="text">
+            </label>
+            <button type="submit">添加</button>
+        </div>
+        <div class="receiverContent">
+            <table>
+                <thead>
+                <tr>
+                    <th class="name-td">姓名</th>
+                    <th class="email-td">Email</th>
+                    <th class="operate-td">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Jack</td>
+                    <td>abc@example.com</td>
+                    <td><span class="edit">修改</span>/<span class="delete">删除</span></td>
+                </tr>
+                <tr>
+                    <td>Tom</td>
+                    <td>abc@example.com</td>
+                    <td><span class="edit">修改</span>/<span class="delete">删除</span></td>
+                </tr>
+                <tr>
+                    <td>Mike</td>
+                    <td>abc@example.com</td>
+                    <td><span class="edit">修改</span>/<span class="delete">删除</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="receiveGroup-layout" style="display: none;">
+        <div class="manageGroup">
+            <h2>接受组管理</h2>
+            <label for="">
+                组名称
+                <input type="text">
+            </label>
+            <button type="submit">添加</button>
+        </div>
+        <div class="receiverContent">
+            <table>
+                <thead>
+                <tr>
+                    <th class="name-td">组名</th>
+                    <th class="email-td">成员数</th>
+                    <th class="operate-td">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>摸鱼组</td>
+                    <td>5</td>
+                    <td><span class="edit">修改</span>/<span class="delete">删除</span></td>
+                </tr>
+                <tr>
+                    <td>咸鱼组</td>
+                    <td>3</td>
+                    <td><span class="edit">修改</span>/<span class="delete">删除</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="message-layout" style="display: none;">
+        <div class="addMessage">
+            <h2>消息管理</h2>
+            <label for="">
+                消息名称
+                <input type="text">
+            </label>
+            <label for="">
+                消息内容
+                <input type="text">
+            </label>
+            <button type="submit">添加</button>
+        </div>
+        <div class="messageContent">
+            <table>
+                <thead>
+                <tr>
+                    <th class="name-td">消息名</th>
+                    <th class="operate-td">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>你好</td>
+                    <td><span class="edit">修改</span>/<span class="delete">删除</span></td>
+                </tr>
+                <tr>
+                    <td>再见</td>
+                    <td><span class="edit">修改</span>/<span class="delete">删除</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="js/index.js"></script>
 </body>
