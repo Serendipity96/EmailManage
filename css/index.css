@@ -103,7 +103,7 @@ ul li span {
     font-size: 18px;
 }
 
-.receiver-layout button,
+.receiver-layout input[type=submit],
 .receiverGroup-layout button,
 .message-layout button,
 .task-layout button,
@@ -115,9 +115,10 @@ ul li span {
     background: #fff;
     color: #1989FA;
     cursor: pointer;
+    font-size: 14px;
 }
 
-.receiver-layout button:hover,
+.receiver-layout input[type=submit]:hover,
 .receiverGroup-layout button:hover,
 .message-layout button:hover,
 .task-layout button:hover,

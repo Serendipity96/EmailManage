@@ -29,15 +29,15 @@
     <div class="receiver-layout" style="display: block;">
         <div class="addReceiver">
             <h2>添加接受者</h2>
-            <label for="">
-                姓名
-                <input type="text">
-            </label>
-            <label for="">
-                Email
-                <input type="text">
-            </label>
-            <button type="submit">添加</button>
+                <label for="">
+                    姓名
+                    <input type="text">
+                </label>
+                <label for="">
+                    Email
+                    <input type="text">
+                </label>
+                <input type="submit">
         </div>
         <div class="receiverContent">
             <table>
@@ -90,12 +90,12 @@
                 <tr>
                     <td>摸鱼组</td>
                     <td>5</td>
-                    <td><span class="edit">修改</span>/<span class="delete">删除</span></td>
+                    <td><span class="edit">修改</span>/<span onclick="removeTr(this)" class="delete">删除</span></td>
                 </tr>
                 <tr>
                     <td>咸鱼组</td>
                     <td>3</td>
-                    <td><span class="edit">修改</span>/<span class="delete">删除</span></td>
+                    <td><span class="edit">修改</span>/<span onclick="removeTr(this)" class="delete">删除</span></td>
                 </tr>
                 </tbody>
             </table>
@@ -156,8 +156,8 @@
                 <label for="">
                     指派发送器
                     <select>
-                        <option value ="volvo" selected>A</option>
-                        <option value ="saab">B</option>
+                        <option value="volvo" selected>A</option>
+                        <option value="saab">B</option>
                         <option value="opel">C</option>
                         <option value="audi">D</option>
                     </select>
@@ -165,8 +165,8 @@
                 <label for="">
                     不接收消息的组
                     <select multiple>
-                        <option value ="volvo" selected>A</option>
-                        <option value ="saab">B</option>
+                        <option value="volvo" selected>A</option>
+                        <option value="saab">B</option>
                         <option value="opel">C</option>
 
                     </select>
@@ -174,8 +174,8 @@
                 <label for="">
                     接收消息的组
                     <select multiple>
-                        <option value ="volvo">A</option>
-                        <option value ="saab">B</option>
+                        <option value="volvo">A</option>
+                        <option value="saab">B</option>
                         <option value="opel">C</option>
                     </select>
                 </label>
@@ -275,6 +275,9 @@
 </div>
 
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
-<script src="js/index.js"></script>
+<script src="js/config.js"></script>
+<script src="js/manageSDK.js"></script>
+<script src="js/sideBar.js"></script>
+<script src="js/receiver.js"></script>
 </body>
 </html>
