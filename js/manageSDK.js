@@ -36,3 +36,45 @@ function deleteReceiver(id,callback) {
     });
 }
 
+
+function groupList(callback) {
+    $.ajax({
+        method: "GET",
+        url: server + "group/list",
+    }).done(function (data) {
+        if (data.status === 200) {
+            let {result} = data;
+            callback.call(this,result)
+        } else {
+            alert(404)
+        }
+    });
+
+}
+
+function addReceiverGroup(groupName,receiverGroupIds,callback) {
+    $.ajax({
+        method: 'POST',
+        url: server + "group/add",
+        data: {
+            name: groupName,
+            receiverId: receiverGroupIds
+        },
+        traditional:true
+    }).done(function (data) {
+        callback.call(this,data);
+    });
+}
+
+function deleteReceiverGroup(id,callback) {
+    $.ajax({
+        method: 'GET',
+        url: server + "group/delete",
+        data: {
+            id:id
+        },
+    }).done(function (data) {
+        callback.call(this,data);
+    });
+}
+

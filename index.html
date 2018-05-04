@@ -75,7 +75,32 @@
                 组名称
                 <input type="text">
             </label>
-            <button type="submit">添加</button>
+            <div class="label-container">
+                <label for="" >
+                    接收消息的人
+                    <select multiple class="select-people">
+                        <option value="volvo">A</option>
+                        <option value="saab">B</option>
+                        <option value="opel">C</option>
+                    </select>
+                </label>
+                <div class="button-container">
+                    <button class="button-right">>></button>
+                    <button class="button-left"><<</button>
+                </div>
+                <label for="" class="no-receiver">
+                    不接收消息的人
+                    <select multiple class="select-people">
+                        <option value="volvo" selected>A</option>
+                        <option value="saab">B</option>
+                        <option value="opel">C</option>
+                        <option value="volvo">D</option>
+                        <option value="saab">E</option>
+                        <option value="opel">F</option>
+                    </select>
+                </label >
+            </div>
+            <input class="button" value="添加" type="submit">
         </div>
         <div class="receiverContent">
             <table>
@@ -279,5 +304,6 @@
 <script src="js/manageSDK.js"></script>
 <script src="js/sideBar.js"></script>
 <script src="js/receiver.js"></script>
+<script src="js/receiverGroup.js"></script>
 </body>
 </html>

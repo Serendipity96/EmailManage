@@ -31,20 +31,6 @@
         render(data) {
             let $el = $(this.el);
             $el.html(this.template);
-        }
-    };
-
-    let model = {
-        status: '',
-        result: []
-    };
-
-    let controller = {
-        init(view, model) {
-            this.view = view;
-            this.model = model;
-            this.view.render(this.model.data);
-            this.reload();
         },
         reload() {
             receiverList(function (list) {
@@ -62,22 +48,35 @@
             });
         }
     };
-    controller.init(view, model);
 
+    let model = {
+        status: '',
+        result: []
+    };
+
+    let controller = {
+        init(view, model) {
+            this.view = view;
+            this.model = model;
+            this.view.render(this.model);
+            this.view.reload();
+        }
+
+    };
+    controller.init(view, model);
 
     $("input[type='submit']").on('click', () => {
         let name = $("input[name='name']").val();
         let email = $("input[name='email']").val();
         addReceiver(name, email, function (data) {
             $("input[type='text']").val('');
-            controller.reload();
+            view.reload();
         });
     });
 
-
     function deleteReceiverTr(id) {
         deleteReceiver(id,function (data) {
-            controller.reload();
+            view.reload();
         });
     }
 }
