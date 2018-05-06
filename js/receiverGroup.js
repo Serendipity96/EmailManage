@@ -57,7 +57,7 @@
                     <tr>
                         <td class="nameField">${result.name}</td>
                         <td class="emailField">${result.receiverNumber}</td>
-                        <td><span class="edit">修改</span>/<span class="delete" onclick="deleteReceiverTr(${result.id})" >删除</span></td>
+                        <td><span class="edit">修改</span>/<span class="delete" onclick="deleteReceiverGroupTr(${result.id})" >删除</span></td>
                     </tr>
                     `);
 
@@ -99,7 +99,7 @@
         })
     });
 
-    function deleteReceiverTr(id) {
+    function deleteReceiverGroupTr(id) {
         deleteReceiverGroup(id, function (data) {
             view.reload();
         });

@@ -23,7 +23,6 @@ function addReceiver(name,email,callback) {
        callback.call(this,data);
     });
 }
-
 function deleteReceiver(id,callback) {
     $.ajax({
         method: 'GET',
@@ -35,7 +34,6 @@ function deleteReceiver(id,callback) {
         callback.call(this,data);
     });
 }
-
 
 function groupList(callback) {
     $.ajax({
@@ -51,7 +49,6 @@ function groupList(callback) {
     });
 
 }
-
 function addReceiverGroup(groupName,receiverGroupIds,callback) {
     $.ajax({
         method: 'POST',
@@ -65,7 +62,6 @@ function addReceiverGroup(groupName,receiverGroupIds,callback) {
         callback.call(this,data);
     });
 }
-
 function deleteReceiverGroup(id,callback) {
     $.ajax({
         method: 'GET',
@@ -78,7 +74,39 @@ function deleteReceiverGroup(id,callback) {
     });
 }
 
-
-function messageList() {
-    
+function messageList(callback) {
+    $.ajax({
+        method: "GET",
+        url: server + "message/list",
+    }).done(function (data) {
+        if (data.status === 200) {
+            let {result} = data;
+            callback.call(this,result)
+        } else {
+            alert(404)
+        }
+    });
+}
+function addMessage(subject,content,callback) {
+    $.ajax({
+        method: 'POST',
+        url: server + "message/add",
+        data: {
+            subject: subject,
+            content: content
+        },
+    }).done(function (data) {
+        callback.call(this,data);
+    });
+}
+function deleteMessage(id,callback) {
+    $.ajax({
+        method: 'GET',
+        url: server + "message/delete",
+        data: {
+            id:id
+        },
+    }).done(function (data) {
+        callback.call(this,data);
+    });
 }

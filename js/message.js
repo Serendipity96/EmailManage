@@ -37,8 +37,8 @@
                 list.map((result) => {
                     $('#tdbody').append(`
                 <tr>
-                    <td>${result.content}</td>
-                    <td><span class="edit">修改</span>/<span class="delete" onclick="deleteReceiverTr(${result.id})" >删除</span></td>
+                    <td>${result.subject}</td>
+                    <td><span class="edit">修改</span>/<span class="delete" onclick="deleteMessageTr(${result.id})" >删除</span></td>
                 </tr>
                     `);
 
@@ -61,16 +61,16 @@
     controller.init(view, model);
 
     $("input[type='submit']").on('click', () => {
-        let messageName = $("input[name='name']").val();
+        let messageSubject = $("input[name='name']").val();
         let messageContent = $("input[name='email']").val();
-        addMessage(messageName, messageContent, function (data) {
+        addMessage(messageSubject, messageContent, function (data) {
             $("input[type='text']").val('');
             view.reload();
         });
     });
 
-    function deleteReceiverTr(id) {
-        deleteReceiver(id,function (data) {
+    function deleteMessageTr(id) {
+        deleteMessage(id,function (data) {
             view.reload();
         });
     }
