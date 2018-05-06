@@ -235,3 +235,118 @@ ul li span {
 .receiverGroup-layout .no-receiver {
     margin: 0;
 }
+
+.task-layout .chooseCron,
+.task-layout .no-receiver{
+    margin:0;
+}
+.task-layout .sendMessage{
+    margin:0 20px;
+}
+.task-layout .select-label{
+    margin-left: 30px;
+}
+.task-layout .no-select-label{
+    margin-left: -12px;
+}
+.appointTransmitter{
+    margin-left: 5px;
+    width: 220px;
+    border: 1px solid #1989FA;
+    margin-bottom: -10px;
+}
+
+.task-button-container button{
+    margin:0 50px;
+}
+/*Cron选择器*/
+.chooseCron-layout-bg
+{
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    opacity: .5;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.chooseCron-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 500px;
+    height: 300px;
+    background: #fff;
+    border-radius: 5px;
+    opacity: 1.0;
+}
+
+.chooseCron-container img{
+    position: absolute;
+    top: 3%;
+    right:3%;
+
+}
+.chooseCron-container img:hover{
+    cursor: pointer;
+}
+/*TABS*/
+.tab-header{
+    width: 100%;
+    height: 40px;
+    margin-top: 5px;
+    margin-left: 5px;
+    border-radius: 5px;
+}
+.tabs .clear-fix{
+    content: ' ';
+    display: block;
+    clear: both;
+}
+.tab-header ul li {
+    height: 40px;
+    width: 50px;
+    float: left;
+}
+.tab-header ul li span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 12px;
+}
+
+.tab-selected{
+    color: #1989FA;
+    background: #fff;
+}
+/*panels*/
+.panel{
+    font-size: 12px;
+}
+.second-panel .line,
+.second-panel .second-list,
+.minute-panel .line,
+.minute-panel .second-list,
+.hour-panel .line,
+.hour-panel .second-list,
+.day-panel .line,
+.day-panel .second-list,
+.week-panel .line,
+.week-panel .second-list,
+.month-panel .line,
+.month-panel .second-list,
+.year-panel .line,
+.year-panel .second-list
+{
+    margin: 7px 22px;
+}
+
+.second-panel .second-list input,
+.minute-panel .second-list input,
+.hour-panel .second-list input ,
+.day-panel .second-list input,
+.week-panel .second-list input{
+    margin-right: 3px;
+}

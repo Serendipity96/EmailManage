@@ -1,6 +1,7 @@
 var layoutArr = document.querySelector('body').children[1].children;
 
-$('li').on('click', function (currentClass) {
+let $li = $('#siderBarTabs').children()
+$li.on('click', function (currentClass) {
     if (currentClass !== "active") {
         $(this).addClass('active');
         $(this).siblings().removeClass('active');
