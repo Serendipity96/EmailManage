@@ -78,3 +78,7 @@ function deleteReceiverGroup(id,callback) {
     });
 }
 
+
+function messageList() {
+    
+}
