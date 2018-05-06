@@ -107,9 +107,9 @@ ul li span {
 
 .receiver-layout input[type=submit],
 .receiverGroup-layout input[type=submit],
-.message-layout button,
+.message-layout input[type=submit],
 .task-layout button,
-.administrators-layout button,
+.administrators-layout input[type=submit],
 .button-container button {
     margin: 0 50px;
     padding: 7px 15px;
@@ -123,9 +123,9 @@ ul li span {
 
 .receiver-layout input[type=submit]:hover,
 .receiverGroup-layout input[type=submit]:hover,
-.message-layout button:hover,
+.message-layout input[type=submit]:hover,
 .task-layout button:hover,
-.administrators-layout button:hover,
+.administrators-layout input[type=submit]:hover,
 .button-container button:hover {
     background: #1989FA;
     color: white;

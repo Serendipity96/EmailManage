@@ -110,3 +110,41 @@ function deleteMessage(id,callback) {
         callback.call(this,data);
     });
 }
+
+function adminList(callback) {
+    $.ajax({
+        method: "GET",
+        url: server + "admin/list",//确认列表前面的名字
+    }).done(function (data) {
+        if (data.status === 200) {
+            let {result} = data;
+            callback.call(this,result)
+        } else {
+            alert(404)
+        }
+    });
+}
+function addAdmin(adminName, adminPassword,adminConfirmPassword,callback) {
+    $.ajax({
+        method: 'POST',
+        url: server + "receiver/add",//确认列表前面的名字和字段
+        data: {
+        adminName: adminName,
+            adminPassword: adminPassword,
+            adminConfirmPassword:adminConfirmPassword
+        },
+    }).done(function (data) {
+        callback.call(this,data);
+    });
+}
+function deleteAdmin(id,callback) {
+    $.ajax({
+        method: 'GET',
+        url: server + "admin/delete",
+        data: {
+            id:id
+        },
+    }).done(function (data) {
+        callback.call(this,data);
+    });
+}

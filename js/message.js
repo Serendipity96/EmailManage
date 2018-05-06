@@ -6,11 +6,11 @@
             <h2>消息管理</h2>
             <label for="">
                 消息名称
-                <input type="text">
+                <input name="subject" type="text">
             </label>
             <label for="">
                 消息内容
-                <input type="text">
+                <input name="content" type="text">
             </label>
             <input class="button" value="添加" type="submit">
         </div>
@@ -22,7 +22,7 @@
                     <th class="operate-td">操作</th>
                 </tr>
                 </thead>
-                <tbody>
+                <tbody id="message-tbody">
                 </tbody>
             </table>
         </div>
@@ -33,9 +33,9 @@
         },
         reload() {
             messageList(function (list) {
-                $('#tdbody').empty();
+                $('#message-tbody').empty();
                 list.map((result) => {
-                    $('#tdbody').append(`
+                    $('#message-tbody').append(`
                 <tr>
                     <td>${result.subject}</td>
                     <td><span class="edit">修改</span>/<span class="delete" onclick="deleteMessageTr(${result.id})" >删除</span></td>
@@ -61,12 +61,13 @@
     controller.init(view, model);
 
     $("input[type='submit']").on('click', () => {
-        let messageSubject = $("input[name='name']").val();
-        let messageContent = $("input[name='email']").val();
+        let messageSubject = $("input[name='subject']").val();
+        let messageContent = $("input[name='content']").val();
         addMessage(messageSubject, messageContent, function (data) {
             $("input[type='text']").val('');
             view.reload();
         });
+        console.log('success')
     });
 
     function deleteMessageTr(id) {
