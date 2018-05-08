@@ -11,7 +11,7 @@
             <div class="label-container">
                 <label for="" >
                     接收消息的人
-                    <select multiple name="selectIds" class="select-people">
+                    <select multiple name="selectIds" class="select-people_0">
                     </select>
                 </label>
                 <div class="button-container">
@@ -20,11 +20,11 @@
                 </div>
                 <label for="" class="no-receiver">
                     不接收消息的人
-                    <select multiple class="noselect-people">
+                    <select multiple class="noselect-people_0">
                     </select>
                 </label >
             </div>
-            <input class="button" value="添加" type="submit">
+            <input id="receiverGroupButton" class="button" value="添加" type="submit">
         </div>
         <div class="receiverContent">
             <table>
@@ -40,10 +40,10 @@
             </table>
         </div>`,
         render() {
-            $(this.el).html(this.template)
+            $(this.el).html(this.template);
             receiverList((list) => {
                 list.map((result) => {
-                    $('.noselect-people').append(`
+                    $('.noselect-people_0').append(`
                     <option value="${result.id}">${result.name}</option>
                     `)
                 })
@@ -82,20 +82,19 @@
 
     controller.init(view, model);
 
-    $("input[type='submit']").on('click', () => {
+    $("#receiverGroupButton").on('click', () => {
         let groupName = $("input[name='groupName']").val();
         let receiverGroupIds = [];
-        let options = $('.select-people').find("option");
+        let options = $('.select-people_0').find("option");
         for (let i = 0; i < options.length; i++) {
             let option = options.eq(i).val();
-            console.log(option)
             if (option !== '') {
                 receiverGroupIds.push(option);
             }
         }
-        console.log(receiverGroupIds)
-        addReceiverGroup(groupName, receiverGroupIds, () => {
-            view.reload();
+
+        addReceiverGroup(groupName, receiverGroupIds, function () {
+                view.reload();
         })
     });
 
@@ -108,12 +107,12 @@
 
     $('.button-right').on('click', () => {
 
-        let option = $('.select-people').find("option:selected");
+        let option = $('.select-people_0').find("option:selected");
         let text = option.text();
         let value = option.val();
         if (text) {
-            $('.noselect-people').prepend(`<option value='${value}'>${text}</option>`)
-            $('.select-people').find("option:selected").remove();
+            $('.noselect-people_0').prepend(`<option value='${value}'>${text}</option>`)
+            $('.select-people_0').find("option:selected").remove();
         }
         else {
             alert('请选中一项')
@@ -122,12 +121,12 @@
 
 
     $('.button-left').on('click', () => {
-        let option = $('.noselect-people').find("option:selected");
+        let option = $('.noselect-people_0').find("option:selected");
         let text = option.text();
         let value = option.val();
         if (option) {
-            $('.noselect-people').find("option:selected").remove();
-            $('.select-people').prepend(`<option value='${value}'>${text}</option>`)
+            $('.noselect-people_0').find("option:selected").remove();
+            $('.select-people_0').prepend(`<option value='${value}'>${text}</option>`)
         }
         else {
             alert('请选中一项')

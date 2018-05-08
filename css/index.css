@@ -210,7 +210,9 @@ ul li span {
 }
 
 .label-container .select-people,
-.label-container .noselect-people{
+.label-container .noselect-people,
+.label-container .select-people_0,
+.label-container .noselect-people_0{
     width: 100px;
     height: 105px;
     border: 1px solid #1989FA;;

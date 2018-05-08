@@ -8,7 +8,6 @@ $('.chooseCron').on('click', function () {
             $(this).siblings().removeClass('tab-selected')
             var panelLayout = '.' + this.id + '-panel';
             let $panels = $('.panel').children();
-            console.log($panels)
             for (let i = 0; i < $panels.length; i++) {
                 $panels[i].style.display = 'none';
             }

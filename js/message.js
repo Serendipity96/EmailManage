@@ -12,7 +12,7 @@
                 消息内容
                 <input name="content" type="text">
             </label>
-            <input class="button" value="添加" type="submit">
+            <input id="messageButton" class="button" value="添加" type="submit">
         </div>
         <div class="messageContent">
             <table>
@@ -60,14 +60,13 @@
     }
     controller.init(view, model);
 
-    $("input[type='submit']").on('click', () => {
+    $("#messageButton").on('click', () => {
         let messageSubject = $("input[name='subject']").val();
         let messageContent = $("input[name='content']").val();
         addMessage(messageSubject, messageContent, function (data) {
             $("input[type='text']").val('');
             view.reload();
         });
-        console.log('success')
     });
 
     function deleteMessageTr(id) {

@@ -12,7 +12,7 @@
                     Email
                     <input name="email" type="text">
                 </label>
-                <input class="button" value="添加" type="submit">
+                <input id="receiverButton" class="button" value="添加" type="submit">
         </div>
         <div class="receiverContent">
             <table>
@@ -65,13 +65,14 @@
     };
     controller.init(view, model);
 
-    $("input[type='submit']").on('click', () => {
+    $("#receiverButton").on('click', () => {
         let name = $("input[name='name']").val();
         let email = $("input[name='email']").val();
         addReceiver(name, email, function (data) {
             $("input[type='text']").val('');
             view.reload();
         });
+
     });
 
     function deleteReceiverTr(id) {
