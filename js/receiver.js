@@ -1,5 +1,5 @@
-{
-    let view = {
+let receiverController = {
+    view: {
         el: '.receiver-layout',
         template: `
         <div class="addReceiver">
@@ -47,37 +47,40 @@
                 })
             });
         }
-    };
+    },
 
-    let model = {
+    model: {
         status: '',
         result: []
-    };
+    },
 
-    let controller = {
+    controller: {
         init(view, model) {
-            this.view = view;
-            this.model = model;
-            this.view.render(this.model);
-            this.view.reload();
+            view.render(model);
+            view.reload();
         }
 
-    };
-    controller.init(view, model);
-
-    $("#receiverButton").on('click', () => {
-        let name = $("input[name='name']").val();
-        let email = $("input[name='email']").val();
-        addReceiver(name, email, function (data) {
-            $("input[type='text']").val('');
-            view.reload();
-        });
-
-    });
-
-    function deleteReceiverTr(id) {
-        deleteReceiver(id,function (data) {
-            view.reload();
-        });
+    },
+    init(){
+        this.controller.init(this.view,this.model)
     }
 }
+
+$("#receiverButton").on('click', () => {
+    let name = $("input[name='name']").val();
+    let email = $("input[name='email']").val();
+    addReceiver(name, email, function (data) {
+        $("input[type='text']").val('');
+        receiverController.view.reload();
+    });
+});
+
+function deleteReceiverTr(id) {
+    deleteReceiver(id, function (data) {
+        receiverController.view.reload();
+    });
+}
+
+
+
+
