@@ -1,3 +1,10 @@
+let taskCrontroller = {
+    init() {
+
+    }
+}
+
+
 $('.chooseCron').on('click', function () {
     $('.chooseCron-layout-bg').show();
     $('.chooseCron-container').show();

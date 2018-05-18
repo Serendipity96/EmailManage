@@ -37,6 +37,20 @@ function deleteReceiver(id, callback) {
     });
 }
 
+function modifyReceiver(id, name, email, callback) {
+    $.ajax({
+        method: 'POST',
+        url: server + "receiver/set",
+        data: {
+            id: id,
+            name: name,
+            email: email
+        },
+    }).done(function (data) {
+        callback.call(this, data);
+    });
+}
+
 function groupList(callback) {
     $.ajax({
         method: "GET",

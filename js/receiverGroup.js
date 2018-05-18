@@ -1,5 +1,5 @@
-{
-    let view = {
+let receiverGroupController = {
+    view: {
         el: '.receiverGroup-layout',
         template: `
         <div class="manageGroup">
@@ -64,74 +64,74 @@
                 })
             });
         }
-    };
+    },
 
-    let model = {
+    model: {
         status: '',
         result: []
-    };
+    },
 
-    let controller = {
+    controller: {
         init(view, model) {
             this.view = view;
             this.model = model;
             this.view.render(this.model);
             this.view.reload();
         }
-    };
+    },
+    init() {
+        this.controller.init(this.view, this.model);
+    }
+}
 
-    controller.init(view, model);
 
-    $("#receiverGroupButton").on('click', () => {
-        let groupName = $("input[name='groupName']").val();
-        let receiverGroupIds = [];
-        let options = $('.select-people_0').find("option");
-        for (let i = 0; i < options.length; i++) {
-            let option = options.eq(i).val();
-            if (option !== '') {
-                receiverGroupIds.push(option);
-            }
+$("#receiverGroupButton").on('click', () => {
+    let groupName = $("input[name='groupName']").val();
+    let receiverGroupIds = [];
+    let options = $('.select-people_0').find("option");
+    for (let i = 0; i < options.length; i++) {
+        let option = options.eq(i).val();
+        if (option !== '') {
+            receiverGroupIds.push(option);
         }
-
-        addReceiverGroup(groupName, receiverGroupIds, function () {
-                view.reload();
-        })
-    });
-
-    function deleteReceiverGroupTr(id) {
-        deleteReceiverGroup(id, function (data) {
-            view.reload();
-        });
     }
 
-
-    $('.button-right').on('click', () => {
-
-        let option = $('.select-people_0').find("option:selected");
-        let text = option.text();
-        let value = option.val();
-        if (text) {
-            $('.noselect-people_0').prepend(`<option value='${value}'>${text}</option>`)
-            $('.select-people_0').find("option:selected").remove();
-        }
-        else {
-            alert('请选中一项')
-        }
+    addReceiverGroup(groupName, receiverGroupIds, function () {
+        receiverGroupController.view.reload();
     })
+});
 
-
-    $('.button-left').on('click', () => {
-        let option = $('.noselect-people_0').find("option:selected");
-        let text = option.text();
-        let value = option.val();
-        if (option) {
-            $('.noselect-people_0').find("option:selected").remove();
-            $('.select-people_0').prepend(`<option value='${value}'>${text}</option>`)
-        }
-        else {
-            alert('请选中一项')
-        }
-    })
-
-
+function deleteReceiverGroupTr(id) {
+    deleteReceiverGroup(id, function (data) {
+        receiverGroupController.view.reload();
+    });
 }
+
+
+$('.button-right').on('click', () => {
+
+    let option = $('.select-people_0').find("option:selected");
+    let text = option.text();
+    let value = option.val();
+    if (text) {
+        $('.noselect-people_0').prepend(`<option value='${value}'>${text}</option>`)
+        $('.select-people_0').find("option:selected").remove();
+    }
+    else {
+        alert('请选中一项')
+    }
+})
+
+
+$('.button-left').on('click', () => {
+    let option = $('.noselect-people_0').find("option:selected");
+    let text = option.text();
+    let value = option.val();
+    if (option) {
+        $('.noselect-people_0').find("option:selected").remove();
+        $('.select-people_0').prepend(`<option value='${value}'>${text}</option>`)
+    }
+    else {
+        alert('请选中一项')
+    }
+})

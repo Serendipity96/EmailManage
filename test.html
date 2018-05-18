@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button class="bb" >123</button>
+</body>
+<script>
+    function bindEventBB(callback) {
+        let bb = document.getElementsByClassName("bb")[0];
+         bb.onclick=callback
+    }
+    function aa() {
+        bindEventBB(
+            function () {
+                alert(1)
+            }
+        )
+    }
+
+</script>
+</html>

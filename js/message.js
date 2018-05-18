@@ -1,5 +1,5 @@
-{
-    let view = {
+let messageController = {
+    view: {
         el: '.message-layout',
         template: `
         <div class="addMessage">
@@ -45,33 +45,36 @@
                 })
             });
         }
-    };
-    let model = {
+    },
+    model: {
         status: '',
         result: []
-    };
-    let controller = {
+    },
+    controller: {
         init(view, model) {
             this.view = view;
             this.model = model;
             this.view.render(this.model);
             this.view.reload();
         }
+    },
+    init() {
+        this.controller.init(this.view, this.model);
     }
-    controller.init(view, model);
+}
 
-    $("#messageButton").on('click', () => {
-        let messageSubject = $("input[name='subject']").val();
-        let messageContent = $("input[name='content']").val();
-        addMessage(messageSubject, messageContent, function (data) {
-            $("input[type='text']").val('');
-            view.reload();
-        });
+
+$("#messageButton").on('click', () => {
+    let messageSubject = $("input[name='subject']").val();
+    let messageContent = $("input[name='content']").val();
+    addMessage(messageSubject, messageContent, function (data) {
+        $("input[type='text']").val('');
+        messageController.view.reload();
     });
+});
 
-    function deleteMessageTr(id) {
-        deleteMessage(id,function (data) {
-            view.reload();
-        });
-    }
+function deleteMessageTr(id) {
+    deleteMessage(id, function (data) {
+        messageController.view.reload();
+    });
 }
