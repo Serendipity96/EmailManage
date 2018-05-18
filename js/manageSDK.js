@@ -119,6 +119,20 @@ function addMessage(subject, content, callback) {
     });
 }
 
+function modifyMessage(id,subject, content, callback) {
+    $.ajax({
+        method: 'POST',
+        url: server + "message/set",
+        data: {
+            id:id,
+            subject: subject,
+            content: content
+        },
+    }).done(function (data) {
+        callback.call(this, data);
+    });
+}
+
 function deleteMessage(id, callback) {
     $.ajax({
         method: 'GET',
