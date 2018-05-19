@@ -6,6 +6,7 @@ let receiverGroupController = {
             <h2>接受组管理</h2>
             <label for="">
                 组名称
+                <input type="hidden" name="id">
                 <input name="groupName" type="text">
             </label>
             <div class="label-container">
@@ -25,6 +26,7 @@ let receiverGroupController = {
                 </label >
             </div>
             <input id="receiverGroupButton" class="button" value="添加" type="submit">
+            <input style="display: none" id="receiverGroupConfirm" onclick="receiverGroupConfirm(this)" class="button" value="确认" type="submit">
         </div>
         <div class="receiverContent">
             <table>
@@ -55,13 +57,14 @@ let receiverGroupController = {
                 list.map((result) => {
                     $('#receiverGroup-tbody').append(`
                     <tr>
+                        <td style="display: none">${result.id}</td>
                         <td class="nameField">${result.name}</td>
                         <td class="emailField">${result.receiverNumber}</td>
-                        <td><span class="edit">修改</span>/<span class="delete" onclick="deleteReceiverGroupTr(${result.id})" >删除</span></td>
+                        <td><span class="edit" onclick="editGroup(this)">修改</span>/<span class="delete" onclick="deleteReceiverGroupTr(${result.id})" >删除</span></td>
                     </tr>
                     `);
 
-                })
+                });
                 $("#receiverGroupButton").on('click', () => {
                     let groupName = $("input[name='groupName']").val();
                     let receiverGroupIds = [];
@@ -72,14 +75,13 @@ let receiverGroupController = {
                             receiverGroupIds.push(option);
                         }
                     }
-
                     addReceiverGroup(groupName, receiverGroupIds, function () {
+                        receiverGroupController.view.render();
                         receiverGroupController.view.reload();
                     })
+                    $("input[name='groupName']").val('');
                 });
-
                 $('.button-right').on('click', () => {
-
                     let option = $('.select-people_0').find("option:selected");
                     let text = option.text();
                     let value = option.val();
@@ -90,8 +92,7 @@ let receiverGroupController = {
                     else {
                         alert('请选中一项')
                     }
-                })
-
+                });
                 $('.button-left').on('click', () => {
                     let option = $('.noselect-people_0').find("option:selected");
                     let text = option.text();
@@ -103,7 +104,8 @@ let receiverGroupController = {
                     else {
                         alert('请选中一项')
                     }
-                })
+                });
+
             });
         }
     },
@@ -131,4 +133,47 @@ function deleteReceiverGroupTr(id) {
     deleteReceiverGroup(id, function (data) {
         receiverGroupController.view.reload();
     });
+}
+
+function editGroup(edit) {
+    $("#receiverGroupButton").hide();
+    $("#receiverGroupConfirm").show();
+    let id = edit.parentNode.parentNode.children[0].textContent;
+    getGroup(id, function (result) {
+        $("input[name='id']").val(result.id);
+        $("input[name='groupName']").val(result.name);
+        let receiverIds = result.receiverId;
+        let options = $('.noselect-people_0').find("option");
+        for (let i = 0; i < options.length; i++) {
+            for (let j = 0; j < receiverIds.length; j++) {
+                if (receiverIds[j] == options[i].value) {
+                    let text = options[i].textContent;
+                    let value = options[i].value;
+                    $('.select-people_0').prepend(`<option value='${value}'>${text}</option>`);
+                    $(`.noselect-people_0 option[value=${value}]`).remove();
+                    break;
+                }
+            }
+
+        }
+    })
+
+
+}
+
+function receiverGroupConfirm(edit) {
+    let id = $('input[name="id"]').val();
+    let groupName = $("input[name='groupName']").val();
+    let receiverGroupIds = [];
+    let options = $('.select-people_0').find("option");
+    for (let i = 0; i < options.length; i++) {
+        let option = options.eq(i).val();
+        if (option !== '') {
+            receiverGroupIds.push(option);
+        }
+    }
+    modifyReceiverGroup(id, groupName, receiverGroupIds, function () {
+        receiverGroupController.view.render();
+        receiverGroupController.view.reload();
+    })
 }

@@ -13,8 +13,8 @@ let messageController = {
                 消息内容
                 <input name="content" type="text">
             </label>
-            <input id="messageButton" class="button" value="添加" type="submit">
-            <input style="display: none" id="messageConfirm" class="button" value="确认" type="submit">
+            <input id="messageButton" onclick="addMessageItem(this)" class="button" value="添加" type="submit">
+            <input style="display: none" id="messageConfirm" onclick="confirmMessage(this)" class="button" value="确认" type="submit">
         </div>
         <div class="messageContent">
             <table>
@@ -46,24 +46,6 @@ let messageController = {
                     `);
 
                 })
-                $("#messageButton").on('click', () => {
-                    let messageSubject = $("input[name='subject']").val();
-                    let messageContent = $("input[name='content']").val();
-                    addMessage(messageSubject, messageContent, function (data) {
-                        $("input[type='text']").val('');
-                        messageController.view.reload();
-                    });
-                })
-
-                $("#messageConfirm").on('click', () => {
-                    let id = $("input[name='id']").val();
-                    let messageSubject = $("input[name='subject']").val();
-                    let messageContent = $("input[name='content']").val();
-                    modifyMessage(id, messageSubject, messageContent, function (data) {
-                        $("input[type='text']").val('');
-                        messageController.view.reload();
-                    });
-                })
             });
         }
     },
@@ -84,7 +66,14 @@ let messageController = {
     }
 }
 
-
+function addMessageItem(edit) {
+    let messageSubject = $("input[name='subject']").val();
+    let messageContent = $("input[name='content']").val();
+    addMessage(messageSubject, messageContent, function (data) {
+        $("input[type='text']").val('');
+        messageController.view.reload();
+    });
+}
 function deleteMessageTr(id) {
     deleteMessage(id, function (data) {
         messageController.view.reload();
@@ -104,4 +93,14 @@ function editMessage(edit) {
             }
         })
     })
+}
+function confirmMessage(edit) {
+        let id = $("input[name='id']").val();
+        let messageSubject = $("input[name='subject']").val();
+        let messageContent = $("input[name='content']").val();
+        modifyMessage(id, messageSubject, messageContent, function (data) {
+            $("input[type='text']").val('');
+            messageController.view.render();
+            messageController.view.reload();
+        });
 }

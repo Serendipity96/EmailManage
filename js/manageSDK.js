@@ -80,6 +80,38 @@ function addReceiverGroup(groupName, receiverGroupIds, callback) {
     });
 }
 
+function modifyReceiverGroup(id,groupName, receiverGroupIds, callback) {
+    $.ajax({
+        method: 'POST',
+        url: server + "group/set",
+        data: {
+            id:id,
+            name: groupName,
+            receiverId: receiverGroupIds
+        },
+        traditional: true
+    }).done(function (data) {
+        callback.call(this, data);
+    });
+}
+
+function getGroup(id,callback) {
+    $.ajax({
+        method: "GET",
+        url: server + "group/get",
+        data:{
+            id:id
+        }
+    }).done(function (data) {
+        if (data.status === 200) {
+            let {result} = data;
+            callback.call(this, result)
+        } else {
+            alert(404)
+        }
+    });
+}
+
 function deleteReceiverGroup(id, callback) {
     $.ajax({
         method: 'GET',
@@ -139,6 +171,36 @@ function deleteMessage(id, callback) {
         url: server + "message/delete",
         data: {
             id: id
+        },
+    }).done(function (data) {
+        callback.call(this, data);
+    });
+}
+
+function taskList(callback) {
+    $.ajax({
+        method: "GET",
+        url: server + "task/list",
+    }).done(function (data) {
+        if (data.status === 200) {
+            let {result} = data;
+            callback.call(this, result)
+        } else {
+            alert(404)
+        }
+    });
+}
+
+function addTask(taskName, taskMessage,taskCron,taskSender,receiverIds,callback) {
+    $.ajax({
+        method: 'POST',
+        url: server + "task/add",
+        data: {
+            taskName: taskName,
+            taskMessage: taskMessage,
+            taskCron:taskCron,
+            taskSender:taskSender,
+            receiverIds:receiverIds
         },
     }).done(function (data) {
         callback.call(this, data);

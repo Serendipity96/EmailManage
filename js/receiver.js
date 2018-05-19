@@ -12,7 +12,7 @@ let receiverController = {
                     Email
                     <input name="email" type="text">
                 </label>
-                <input id="receiverButton" class="button" value="添加" type="submit">
+                <input id="receiverButton"  onclick="addReceiverItem(this)" class="button" value="添加" type="submit">
         </div>
         <div class="receiverContent">
             <table>
@@ -45,14 +45,6 @@ let receiverController = {
                     </tr>
                     `);
                 })
-                $("#receiverButton").on('click', () => {
-                    let name = $("input[name='name']").val();
-                    let email = $("input[name='email']").val();
-                    addReceiver(name, email, function (data) {
-                        $("input[type='text']").val('');
-                        receiverController.view.reload();
-                    });
-                });
             });
         }
     },
@@ -75,6 +67,14 @@ let receiverController = {
     }
 }
 
+function addReceiverItem(edit) {
+    let name = $("input[name='name']").val();
+    let email = $("input[name='email']").val();
+    addReceiver(name, email, function (data) {
+        $("input[type='text']").val('');
+        receiverController.view.reload();
+    });
+}
 
 function deleteReceiverTr(id) {
     deleteReceiver(id, function (data) {
