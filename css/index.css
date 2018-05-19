@@ -300,13 +300,16 @@ ul li span {
     opacity: 1.0;
 }
 
-.chooseCron-container img {
+.chooseCron-container #closeButton {
     position: absolute;
     top: 3%;
     right: 3%;
-
 }
-
+.chooseCron-container #addButton {
+    position: absolute;
+    top: 3%;
+    right: 12%;
+}
 .chooseCron-container img:hover {
     cursor: pointer;
 }
@@ -353,24 +356,24 @@ ul li span {
 .second-panel .line,
 .second-panel .second-list,
 .minute-panel .line,
-.minute-panel .second-list,
+.minute-panel .minute-list,
 .hour-panel .line,
-.hour-panel .second-list,
+.hour-panel .hour-list,
 .day-panel .line,
-.day-panel .second-list,
+.day-panel .day-list,
 .week-panel .line,
-.week-panel .second-list,
+.week-panel .week-list,
 .month-panel .line,
-.month-panel .second-list,
+.month-panel .month-list,
 .year-panel .line,
-.year-panel .second-list {
+.year-panel .year-list {
     margin: 7px 22px;
 }
 
 .second-panel .second-list input,
-.minute-panel .second-list input,
-.hour-panel .second-list input,
-.day-panel .second-list input,
-.week-panel .second-list input {
+.minute-panel .minute-list input,
+.hour-panel .hour-list input,
+.day-panel .day-list input,
+.week-panel .week-list input {
     margin-right: 3px;
 }

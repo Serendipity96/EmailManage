@@ -14,7 +14,7 @@ let taskController = {
                 <input name="taskMessage" type="text">
             </label>
             <button class="chooseCron">选择Cron</button>
-            <input type="text">
+            <input type="text" disabled="disabled">
         </div>
         <div class="row" style="margin-top: 15px">
             <label for="">
@@ -42,7 +42,7 @@ let taskController = {
                     </select>
                 </label>
             </div>
-            <button id="taskButton" type="submit">添加</button>
+            <button id="taskButton" onclick="addTaskItem(this)" type="submit">添加</button>
         </div>
     </div>
             <div class="taskContent">
@@ -68,28 +68,6 @@ let taskController = {
                     <option value="${result.id}">${result.name}</option>
                     `)
                 })
-                $("#taskButton").on('click', () => {
-                    let taskName = $("input[name='taskName']").val();
-                    let taskMessage = $("input[name='taskMessage']").val();
-                    let taskCron;
-                    let taskSender;
-                    //Cron值的获取
-                    //发送器的值
-                    let receiverIds = [];
-                    let options = $('.select-people').find("option");
-                    for (let i = 0; i < options.length; i++) {
-                        let option = options.eq(i).val();
-                        if (option !== '') {
-                            receiverIds.push(option);
-                        }
-                    }
-
-                    addTask(taskName, taskMessage,taskCron,taskSender,receiverIds, function () {
-                        taskController.view.reload();
-                    })
-                    $("input[name='taskName']").val();
-                    $("input[name='taskMessage']").val();
-                });
                 $('.button-right').on('click', () => {
                     let option = $('.select-people_0').find("option:selected");
                     let text = option.text();
@@ -150,6 +128,7 @@ let taskController = {
                     $('.chooseCron-layout-bg').hide();
                     $('.chooseCron-container').hide();
                 });
+
             })
         },
 
@@ -174,3 +153,25 @@ let taskController = {
 
 }
 
+function addTaskItem() {
+    let taskName = $("input[name='taskName']").val();
+    let taskMessage = $("input[name='taskMessage']").val();
+    let taskCron;
+    let taskSender;
+    //Cron值的获取
+    //发送器的值
+    let receiverIds = [];
+    let options = $('.select-people').find("option");
+    for (let i = 0; i < options.length; i++) {
+        let option = options.eq(i).val();
+        if (option !== '') {
+            receiverIds.push(option);
+        }
+    }
+    addTask(taskName, taskMessage, taskCron, taskSender, receiverIds, function () {
+        taskController.view.render();
+        taskController.view.reload();
+    })
+
+
+}
