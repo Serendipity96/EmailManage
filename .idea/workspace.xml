@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="efb60b3c-ba16-4b48-8fde-fbf1e445cadf" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/emailSender.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/js/emailSender.js" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/css/index.css" afterPath="$PROJECT_DIR$/css/index.css" />
-      <change beforePath="$PROJECT_DIR$/emailTransmitter.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change beforePath="$PROJECT_DIR$/js/sideBar.js" afterPath="$PROJECT_DIR$/js/sideBar.js" />
-      <change beforePath="$PROJECT_DIR$/message.html" afterPath="$PROJECT_DIR$/message.html" />
-      <change beforePath="$PROJECT_DIR$/receiver.html" afterPath="$PROJECT_DIR$/receiver.html" />
-      <change beforePath="$PROJECT_DIR$/receiverGroup.html" afterPath="$PROJECT_DIR$/receiverGroup.html" />
-    </list>
+    <list default="true" id="efb60b3c-ba16-4b48-8fde-fbf1e445cadf" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -340,12 +329,12 @@
       <workItem from="1525580710777" duration="15776000" />
       <workItem from="1525833725388" duration="2790000" />
       <workItem from="1526213069836" duration="5642000" />
-      <workItem from="1526436835011" duration="62879000" />
+      <workItem from="1526436835011" duration="62991000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="163915000" />
+    <option name="totallyTimeSpent" value="164027000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
