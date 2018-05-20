@@ -76,7 +76,7 @@ ul li span {
 .receiverGroup-layout h2,
 .message-layout h2,
 .task-layout h2,
-.emailTransmitter-layout h2,
+.emailSender-layout h2,
 .addAdministrators h2 {
     margin: 50px 0 30px 50px;
     font-weight: lighter;
@@ -145,7 +145,7 @@ ul li span {
 .receiverContent,
 .messageContent,
 .taskContent,
-.emailTransmitterContent,
+.emailSenderContent,
 .administratorsContent {
     margin: 50px;
 }
@@ -153,7 +153,7 @@ ul li span {
 .receiverContent .name-td, .email-td, .operate-td,
 .messageContent .name-td, .operate-td,
 .taskContent .name-td, .email-td, .operate-td,
-.emailTransmitterContent .name-td, .email-td, .operate-td,
+.emailSenderContent .name-td, .email-td, .operate-td,
 .administratorsContent .name-td, .operate-td {
     font-weight: 500;
     padding-right: 300px;
@@ -173,7 +173,7 @@ ul li span {
 .receiverContent td,
 .messageContent td,
 .taskContent td,
-.emailTransmitterContent td,
+.emailSenderContent td,
 .administratorsContent td {
     padding: 10px 0;
     border-bottom: 1px solid #ccc;
@@ -182,7 +182,6 @@ ul li span {
 .receiverContent td input,
 .messageContent td input,
 .taskContent td input,
-.emailTransmitterContent td input,
 .administratorsContent td input {
     margin: 0;
     padding: 5px;
@@ -194,7 +193,6 @@ ul li span {
 .receiverContent td span,
 .messageContent td span,
 .taskContent td span,
-.emailTransmitterContent td span,
 .administratorsContent td span {
     cursor: pointer;
 }
@@ -202,7 +200,6 @@ ul li span {
 .receiverContent td .edit:hover,
 .messageContent td .edit:hover,
 .taskContent td .edit:hover,
-.emailTransmitterContent td .reset:hover,
 .administratorsContent td .edit:hover {
     color: #1989FA;
 }
@@ -210,14 +207,10 @@ ul li span {
 .receiverContent td .delete:hover,
 .messageContent td .delete:hover,
 .taskContent td .delete:hover,
-.emailTransmitterContent td .stop:hover,
 .administratorsContent td .edit:hover {
     color: #e55c5c;
 }
 
-.emailTransmitterContent td .wait:hover {
-    color: #8a8a8a;
-}
 
 .label-container {
     display: inline;

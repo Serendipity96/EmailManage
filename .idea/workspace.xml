@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efb60b3c-ba16-4b48-8fde-fbf1e445cadf" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/emailSender.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/emailSender.js" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/css/index.css" afterPath="$PROJECT_DIR$/css/index.css" />
-      <change beforePath="$PROJECT_DIR$/js/config.js" afterPath="$PROJECT_DIR$/js/config.js" />
-      <change beforePath="$PROJECT_DIR$/js/manageSDK.js" afterPath="$PROJECT_DIR$/js/manageSDK.js" />
-      <change beforePath="$PROJECT_DIR$/js/message.js" afterPath="$PROJECT_DIR$/js/message.js" />
-      <change beforePath="$PROJECT_DIR$/js/task.js" afterPath="$PROJECT_DIR$/js/task.js" />
-      <change beforePath="$PROJECT_DIR$/task.html" afterPath="$PROJECT_DIR$/task.html" />
+      <change beforePath="$PROJECT_DIR$/emailTransmitter.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change beforePath="$PROJECT_DIR$/js/sideBar.js" afterPath="$PROJECT_DIR$/js/sideBar.js" />
+      <change beforePath="$PROJECT_DIR$/message.html" afterPath="$PROJECT_DIR$/message.html" />
+      <change beforePath="$PROJECT_DIR$/receiver.html" afterPath="$PROJECT_DIR$/receiver.html" />
+      <change beforePath="$PROJECT_DIR$/receiverGroup.html" afterPath="$PROJECT_DIR$/receiverGroup.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,8 +28,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="31" column="36" lean-forward="true" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
+            <state relative-caret-position="298">
+              <caret line="38" column="25" lean-forward="false" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
               <folding>
                 <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -34,76 +38,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="task.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/task.html">
+      <file leaf-file-name="emailSender.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/emailSender.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4389">
-              <caret line="621" column="10" lean-forward="false" selection-start-line="621" selection-start-column="10" selection-end-line="621" selection-end-column="10" />
+            <state relative-caret-position="198">
+              <caret line="18" column="43" lean-forward="false" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
               <folding>
-                <element signature="n#ul#0;n#div#0;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#0;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#div#0;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#2;n#div#0;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#3;n#div#0;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#4;n#div#0;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#5;n#div#0;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#6;n#div#0;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#7;n#div#0;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#8;n#div#0;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#9;n#div#0;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#1;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#div#1;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#2;n#div#1;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#3;n#div#1;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#4;n#div#1;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#5;n#div#1;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#6;n#div#1;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#7;n#div#1;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#8;n#div#1;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#9;n#div#1;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#2;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#2;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#div#2;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#2;n#div#2;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#3;n#div#2;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#4;n#div#2;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#5;n#div#2;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#3;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#3;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#div#3;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#2;n#div#3;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#3;n#div#3;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#4;n#div#3;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#5;n#div#3;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#6;n#div#3;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#7;n#div#3;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#4;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#4;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#div#4;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#2;n#div#4;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#3;n#div#4;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#4;n#div#4;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#5;n#div#4;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#5;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#5;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#div#5;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#2;n#div#5;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#3;n#div#5;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#4;n#div#5;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#5;n#div#5;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#6;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#6;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#div#6;n#div#1;n#div#2;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#input#1;n#div#2;n#div#6;n#div#1;n#div#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#2;n#div#2;n#div#6;n#div#1;n#div#2;n#!!top" expanded="true" />
-                <element signature="e#25228#25442#0" expanded="false" />
-                <element signature="e#25498#25711#0" expanded="false" />
-                <element signature="e#25765#25976#0" expanded="false" />
-                <element signature="e#26029#26239#0" expanded="false" />
-                <element signature="e#26293#26504#0" expanded="false" />
-                <element signature="e#26559#26771#0" expanded="false" />
+                <marker date="1526805786887" expanded="true" signature="163:423" ph="..." />
+                <marker date="1526805786887" expanded="true" signature="179:412" ph="..." />
+                <marker date="1526805786887" expanded="true" signature="199:344" ph="..." />
+                <marker date="1526805786887" expanded="true" signature="216:323" ph="..." />
+                <marker date="1526805786887" expanded="true" signature="387:395" ph="..." />
+                <marker date="1526805786887" expanded="true" signature="921:1090" ph="..." />
               </folding>
             </state>
           </provider>
@@ -112,8 +58,8 @@
       <file leaf-file-name="manageSDK.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/manageSDK.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="562">
-              <caret line="234" column="24" lean-forward="false" selection-start-line="234" selection-start-column="24" selection-end-line="234" selection-end-column="24" />
+            <state relative-caret-position="-117">
+              <caret line="222" column="80" lean-forward="false" selection-start-line="222" selection-start-column="80" selection-end-line="222" selection-end-column="80" />
               <folding>
                 <element signature="n#!!block;n#receiverList#0" expanded="false" />
                 <element signature="n#!!block;n#deleteReceiver#0" expanded="false" />
@@ -130,26 +76,27 @@
                 <element signature="n#!!block;n#taskList#0" expanded="false" />
                 <element signature="n#!!block;n#addTask#0" expanded="false" />
                 <element signature="n#!!block;n#deleteTask#0" expanded="false" />
+                <element signature="n#!!block;n#modifyTask#0" expanded="false" />
                 <element signature="n#!!block;n#getTask#0" expanded="false" />
-                <element signature="n#!!block;n#senderList#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="task.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="task.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/task.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="221" column="22" lean-forward="true" selection-start-line="221" selection-start-column="22" selection-end-line="221" selection-end-column="22" />
+            <state relative-caret-position="143">
+              <caret line="61" column="12" lean-forward="true" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="43" />
               <folding>
                 <element signature="e#2881#3345#0" expanded="false" />
                 <element signature="e#3396#3864#0" expanded="false" />
                 <element signature="e#4599#5496#0" expanded="false" />
                 <element signature="e#5551#5680#0" expanded="false" />
                 <element signature="e#5729#5775#0" expanded="false" />
+                <element signature="e#5793#5975#0" expanded="false" />
+                <element signature="e#5989#6049#0" expanded="false" />
                 <element signature="n#!!block;n#deleteTaskTr#0" expanded="false" />
-                <element signature="n#!!block;n#editTask#0" expanded="false" />
                 <marker date="1526803681426" expanded="true" signature="119:1775" ph="..." />
                 <marker date="1526803681426" expanded="true" signature="183:658" ph="..." />
                 <marker date="1526803681426" expanded="true" signature="214:360" ph="..." />
@@ -184,8 +131,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -208,6 +155,8 @@
       <find>week</find>
       <find>select</find>
       <find>appointSender</find>
+      <find>emailTransmitter</find>
+      <find>emailSender</find>
     </findStrings>
     <replaceStrings>
       <replace>receiver-layout</replace>
@@ -216,6 +165,7 @@
       <replace>week</replace>
       <replace>month</replace>
       <replace>appointSender</replace>
+      <replace>emailSender</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -239,21 +189,24 @@
         <option value="$PROJECT_DIR$/js/test.js" />
         <option value="$PROJECT_DIR$/receiver.js" />
         <option value="$PROJECT_DIR$/reeiver.html" />
-        <option value="$PROJECT_DIR$/emailTransmitter.html" />
         <option value="$PROJECT_DIR$/administrators.html" />
         <option value="$PROJECT_DIR$/test.html" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/message.html" />
-        <option value="$PROJECT_DIR$/js/sideBar.js" />
         <option value="$PROJECT_DIR$/js/receiver.js" />
         <option value="$PROJECT_DIR$/js/receiverGroup.js" />
-        <option value="$PROJECT_DIR$/receiver.html" />
         <option value="$PROJECT_DIR$/js/config.js" />
         <option value="$PROJECT_DIR$/task.html" />
         <option value="$PROJECT_DIR$/js/message.js" />
-        <option value="$PROJECT_DIR$/css/index.css" />
         <option value="$PROJECT_DIR$/js/manageSDK.js" />
         <option value="$PROJECT_DIR$/js/task.js" />
+        <option value="$PROJECT_DIR$/emailTransmitter.html" />
+        <option value="$PROJECT_DIR$/css/index.css" />
+        <option value="$PROJECT_DIR$/emailSender.html" />
+        <option value="$PROJECT_DIR$/message.html" />
+        <option value="$PROJECT_DIR$/receiverGroup.html" />
+        <option value="$PROJECT_DIR$/js/sideBar.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/receiver.html" />
+        <option value="$PROJECT_DIR$/js/emailSender.js" />
       </list>
     </option>
   </component>
@@ -387,18 +340,18 @@
       <workItem from="1525580710777" duration="15776000" />
       <workItem from="1525833725388" duration="2790000" />
       <workItem from="1526213069836" duration="5642000" />
-      <workItem from="1526436835011" duration="60792000" />
+      <workItem from="1526436835011" duration="62879000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="161828000" />
+    <option name="totallyTimeSpent" value="163915000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20044877" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20044877" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -449,14 +402,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10428">
-          <caret line="316" column="17" lean-forward="false" selection-start-line="316" selection-start-column="17" selection-end-line="316" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1287">
@@ -496,7 +441,6 @@
         <state relative-caret-position="891">
           <caret line="50" column="16" lean-forward="false" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
           <folding>
-            <element signature="e#1829#1875#0" expanded="false" />
             <element signature="n#!!block;n#deleteReceiverTr#0" expanded="false" />
             <marker date="1526709332465" expanded="true" signature="123:548" ph="..." />
             <marker date="1526709332465" expanded="true" signature="181:281" ph="..." />
@@ -552,7 +496,6 @@
         <state relative-caret-position="1650">
           <caret line="50" column="16" lean-forward="false" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
           <folding>
-            <element signature="e#1829#1875#0" expanded="false" />
             <element signature="n#!!block;n#deleteReceiverTr#0" expanded="false" />
             <marker date="1526709332465" expanded="true" signature="123:548" ph="..." />
             <marker date="1526709332465" expanded="true" signature="181:281" ph="..." />
@@ -690,26 +633,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/emailTransmitter.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="36" lean-forward="false" selection-start-line="0" selection-start-column="36" selection-end-line="0" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/administrators.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="34" lean-forward="false" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/receiverGroup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1616">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -753,22 +680,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/message.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="32" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/sideBar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="8" column="27" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/img/环 对.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -804,36 +715,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/receiver.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2328">
-          <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
-          <folding>
-            <element signature="e#1829#1875#0" expanded="false" />
-            <element signature="n#!!block;n#deleteReceiverTr#0" expanded="false" />
-            <marker date="1526709332465" expanded="true" signature="123:548" ph="..." />
-            <marker date="1526709332465" expanded="true" signature="181:281" ph="..." />
-            <marker date="1526709332465" expanded="true" signature="312:416" ph="..." />
-            <marker date="1526709332465" expanded="true" signature="586:948" ph="..." />
-            <marker date="1526709332465" expanded="true" signature="606:933" ph="..." />
-            <marker date="1526709332465" expanded="true" signature="630:849" ph="..." />
-            <marker date="1526709332465" expanded="true" signature="651:824" ph="..." />
-            <marker date="1526709332465" expanded="true" signature="887:912" ph="..." />
-            <marker date="1526709332465" expanded="true" signature="1270:1739" ph="..." />
-            <marker date="1526709332465" expanded="true" signature="1307:1320" ph="..." />
-            <marker date="1526709332465" expanded="true" signature="1515:1528" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/receiver.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -859,14 +740,6 @@
             <marker date="1526802347379" expanded="true" signature="984:1009" ph="..." />
             <marker date="1526802347379" expanded="true" signature="1376:1652" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="127" column="26" lean-forward="true" selection-start-line="127" selection-start-column="26" selection-end-line="127" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -900,46 +773,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/manageSDK.js">
+    <entry file="file://$PROJECT_DIR$/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="234" column="24" lean-forward="false" selection-start-line="234" selection-start-column="24" selection-end-line="234" selection-end-column="24" />
+        <state relative-caret-position="209">
+          <caret line="78" column="12" lean-forward="false" selection-start-line="78" selection-start-column="1" selection-end-line="78" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/receiver.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-992">
+          <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
           <folding>
-            <element signature="n#!!block;n#receiverList#0" expanded="false" />
-            <element signature="n#!!block;n#deleteReceiver#0" expanded="false" />
-            <element signature="n#!!block;n#modifyReceiver#0" expanded="false" />
-            <element signature="n#!!block;n#groupList#0" expanded="false" />
-            <element signature="n#!!block;n#addReceiverGroup#0" expanded="false" />
-            <element signature="n#!!block;n#modifyReceiverGroup#0" expanded="false" />
-            <element signature="n#!!block;n#getGroup#0" expanded="false" />
-            <element signature="n#!!block;n#deleteReceiverGroup#0" expanded="false" />
-            <element signature="n#!!block;n#messageList#0" expanded="false" />
-            <element signature="n#!!block;n#addMessage#0" expanded="false" />
-            <element signature="n#!!block;n#modifyMessage#0" expanded="false" />
-            <element signature="n#!!block;n#deleteMessage#0" expanded="false" />
-            <element signature="n#!!block;n#taskList#0" expanded="false" />
-            <element signature="n#!!block;n#addTask#0" expanded="false" />
-            <element signature="n#!!block;n#deleteTask#0" expanded="false" />
-            <element signature="n#!!block;n#getTask#0" expanded="false" />
-            <element signature="n#!!block;n#senderList#0" expanded="false" />
+            <element signature="n#!!block;n#deleteReceiverTr#0" expanded="false" />
+            <marker date="1526709332465" expanded="true" signature="123:548" ph="..." />
+            <marker date="1526709332465" expanded="true" signature="181:281" ph="..." />
+            <marker date="1526709332465" expanded="true" signature="312:416" ph="..." />
+            <marker date="1526709332465" expanded="true" signature="586:948" ph="..." />
+            <marker date="1526709332465" expanded="true" signature="606:933" ph="..." />
+            <marker date="1526709332465" expanded="true" signature="630:849" ph="..." />
+            <marker date="1526709332465" expanded="true" signature="651:824" ph="..." />
+            <marker date="1526709332465" expanded="true" signature="887:912" ph="..." />
+            <marker date="1526709332465" expanded="true" signature="1270:1739" ph="..." />
+            <marker date="1526709332465" expanded="true" signature="1307:1320" ph="..." />
+            <marker date="1526709332465" expanded="true" signature="1515:1528" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/receiverGroup.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="31" column="36" lean-forward="true" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="34" lean-forward="false" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/task.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4389">
+        <state relative-caret-position="442">
           <caret line="621" column="10" lean-forward="false" selection-start-line="621" selection-start-column="10" selection-end-line="621" selection-end-column="10" />
           <folding>
             <element signature="n#ul#0;n#div#0;n#div#2;n#!!top" expanded="false" />
@@ -1010,18 +883,88 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/message.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="28" lean-forward="false" selection-start-line="0" selection-start-column="28" selection-end-line="0" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/receiver.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="38" column="25" lean-forward="false" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/emailSender.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="34" lean-forward="false" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/sideBar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="7" column="30" lean-forward="false" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/manageSDK.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-117">
+          <caret line="222" column="80" lean-forward="false" selection-start-line="222" selection-start-column="80" selection-end-line="222" selection-end-column="80" />
+          <folding>
+            <element signature="n#!!block;n#receiverList#0" expanded="false" />
+            <element signature="n#!!block;n#deleteReceiver#0" expanded="false" />
+            <element signature="n#!!block;n#modifyReceiver#0" expanded="false" />
+            <element signature="n#!!block;n#groupList#0" expanded="false" />
+            <element signature="n#!!block;n#addReceiverGroup#0" expanded="false" />
+            <element signature="n#!!block;n#modifyReceiverGroup#0" expanded="false" />
+            <element signature="n#!!block;n#getGroup#0" expanded="false" />
+            <element signature="n#!!block;n#deleteReceiverGroup#0" expanded="false" />
+            <element signature="n#!!block;n#messageList#0" expanded="false" />
+            <element signature="n#!!block;n#addMessage#0" expanded="false" />
+            <element signature="n#!!block;n#modifyMessage#0" expanded="false" />
+            <element signature="n#!!block;n#deleteMessage#0" expanded="false" />
+            <element signature="n#!!block;n#taskList#0" expanded="false" />
+            <element signature="n#!!block;n#addTask#0" expanded="false" />
+            <element signature="n#!!block;n#deleteTask#0" expanded="false" />
+            <element signature="n#!!block;n#modifyTask#0" expanded="false" />
+            <element signature="n#!!block;n#getTask#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/task.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="221" column="22" lean-forward="true" selection-start-line="221" selection-start-column="22" selection-end-line="221" selection-end-column="22" />
+        <state relative-caret-position="143">
+          <caret line="61" column="12" lean-forward="true" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="43" />
           <folding>
             <element signature="e#2881#3345#0" expanded="false" />
             <element signature="e#3396#3864#0" expanded="false" />
             <element signature="e#4599#5496#0" expanded="false" />
             <element signature="e#5551#5680#0" expanded="false" />
             <element signature="e#5729#5775#0" expanded="false" />
+            <element signature="e#5793#5975#0" expanded="false" />
+            <element signature="e#5989#6049#0" expanded="false" />
             <element signature="n#!!block;n#deleteTaskTr#0" expanded="false" />
-            <element signature="n#!!block;n#editTask#0" expanded="false" />
             <marker date="1526803681426" expanded="true" signature="119:1775" ph="..." />
             <marker date="1526803681426" expanded="true" signature="183:658" ph="..." />
             <marker date="1526803681426" expanded="true" signature="214:360" ph="..." />
@@ -1045,6 +988,21 @@
             <marker date="1526803681426" expanded="true" signature="2080:2101" ph="..." />
             <marker date="1526803681426" expanded="true" signature="4084:4290" ph="..." />
             <marker date="1526803681426" expanded="true" signature="4084:4497" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/emailSender.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="18" column="43" lean-forward="false" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+          <folding>
+            <marker date="1526805786887" expanded="true" signature="163:423" ph="..." />
+            <marker date="1526805786887" expanded="true" signature="179:412" ph="..." />
+            <marker date="1526805786887" expanded="true" signature="199:344" ph="..." />
+            <marker date="1526805786887" expanded="true" signature="216:323" ph="..." />
+            <marker date="1526805786887" expanded="true" signature="387:395" ph="..." />
+            <marker date="1526805786887" expanded="true" signature="921:1090" ph="..." />
           </folding>
         </state>
       </provider>
