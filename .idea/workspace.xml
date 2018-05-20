@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efb60b3c-ba16-4b48-8fde-fbf1e445cadf" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/css/index.css" afterPath="$PROJECT_DIR$/css/index.css" />
-      <change beforePath="$PROJECT_DIR$/img/close.png" afterPath="$PROJECT_DIR$/img/close.png" />
+      <change beforePath="$PROJECT_DIR$/js/config.js" afterPath="$PROJECT_DIR$/js/config.js" />
+      <change beforePath="$PROJECT_DIR$/js/manageSDK.js" afterPath="$PROJECT_DIR$/js/manageSDK.js" />
+      <change beforePath="$PROJECT_DIR$/js/message.js" afterPath="$PROJECT_DIR$/js/message.js" />
       <change beforePath="$PROJECT_DIR$/js/task.js" afterPath="$PROJECT_DIR$/js/task.js" />
-      <change beforePath="$PROJECT_DIR$/receiver.html" afterPath="$PROJECT_DIR$/receiver.html" />
       <change beforePath="$PROJECT_DIR$/task.html" afterPath="$PROJECT_DIR$/task.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -21,13 +21,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="task.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="364">
+              <caret line="31" column="36" lean-forward="true" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="task.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/task.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="444" column="53" lean-forward="false" selection-start-line="444" selection-start-column="53" selection-end-line="444" selection-end-column="53" />
+            <state relative-caret-position="4389">
+              <caret line="621" column="10" lean-forward="false" selection-start-line="621" selection-start-column="10" selection-end-line="621" selection-end-column="10" />
               <folding>
-                <element signature="n#div#0;n#div#2;n#!!top" expanded="false" />
                 <element signature="n#ul#0;n#div#0;n#div#2;n#!!top" expanded="false" />
                 <element signature="n#div#0;n#div#1;n#div#2;n#!!top" expanded="false" />
                 <element signature="n#div#0;n#div#0;n#div#1;n#div#2;n#!!top" expanded="false" />
@@ -97,79 +109,70 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="task.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/task.js">
+      <file leaf-file-name="manageSDK.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/manageSDK.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-510">
-              <caret line="130" column="0" lean-forward="false" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
+            <state relative-caret-position="562">
+              <caret line="234" column="24" lean-forward="false" selection-start-line="234" selection-start-column="24" selection-end-line="234" selection-end-column="24" />
               <folding>
-                <element signature="e#2551#3065#0" expanded="false" />
-                <element signature="e#3120#3638#0" expanded="false" />
-                <element signature="e#3798#4195#0" expanded="false" />
-                <element signature="e#4255#5152#0" expanded="false" />
-                <element signature="e#5207#5336#0" expanded="false" />
-                <element signature="e#5385#5431#0" expanded="false" />
-                <element signature="e#5449#5631#0" expanded="false" />
-                <marker date="1526719783327" expanded="true" signature="119:1790" ph="..." />
-                <marker date="1526719783327" expanded="true" signature="183:578" ph="..." />
-                <marker date="1526719783327" expanded="true" signature="214:312" ph="..." />
-                <marker date="1526719783327" expanded="true" signature="359:456" ph="..." />
-                <marker date="1526719783327" expanded="true" signature="612:628" ph="..." />
-                <marker date="1526719783327" expanded="true" signature="629:1779" ph="..." />
-                <marker date="1526719783327" expanded="true" signature="656:996" ph="..." />
-                <marker date="1526719783327" expanded="true" signature="731:975" ph="..." />
-                <marker date="1526719783327" expanded="true" signature="1038:1674" ph="..." />
-                <marker date="1526719783327" expanded="true" signature="1090:1232" ph="..." />
-                <marker date="1526719783327" expanded="true" signature="1177:1207" ph="..." />
-                <marker date="1526719783327" expanded="true" signature="1301:1445" ph="..." />
-                <marker date="1526719783327" expanded="true" signature="1512:1655" ph="..." />
-                <marker date="1526719783327" expanded="true" signature="1600:1630" ph="..." />
-                <marker date="1526719783327" expanded="true" signature="1828:2142" ph="..." />
-                <marker date="1526719783327" expanded="true" signature="1844:2131" ph="..." />
-                <marker date="1526719783327" expanded="true" signature="1864:2057" ph="..." />
-                <marker date="1526719783327" expanded="true" signature="1881:2036" ph="..." />
-                <marker date="1526719783327" expanded="true" signature="2093:2114" ph="..." />
+                <element signature="n#!!block;n#receiverList#0" expanded="false" />
+                <element signature="n#!!block;n#deleteReceiver#0" expanded="false" />
+                <element signature="n#!!block;n#modifyReceiver#0" expanded="false" />
+                <element signature="n#!!block;n#groupList#0" expanded="false" />
+                <element signature="n#!!block;n#addReceiverGroup#0" expanded="false" />
+                <element signature="n#!!block;n#modifyReceiverGroup#0" expanded="false" />
+                <element signature="n#!!block;n#getGroup#0" expanded="false" />
+                <element signature="n#!!block;n#deleteReceiverGroup#0" expanded="false" />
+                <element signature="n#!!block;n#messageList#0" expanded="false" />
+                <element signature="n#!!block;n#addMessage#0" expanded="false" />
+                <element signature="n#!!block;n#modifyMessage#0" expanded="false" />
+                <element signature="n#!!block;n#deleteMessage#0" expanded="false" />
+                <element signature="n#!!block;n#taskList#0" expanded="false" />
+                <element signature="n#!!block;n#addTask#0" expanded="false" />
+                <element signature="n#!!block;n#deleteTask#0" expanded="false" />
+                <element signature="n#!!block;n#getTask#0" expanded="false" />
+                <element signature="n#!!block;n#senderList#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/index.css">
+      <file leaf-file-name="task.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/task.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="838">
-              <caret line="373" column="33" lean-forward="true" selection-start-line="373" selection-start-column="33" selection-end-line="373" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="receiverGroup.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/receiverGroup.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1088">
-              <caret line="78" column="62" lean-forward="false" selection-start-line="78" selection-start-column="62" selection-end-line="78" selection-end-column="62" />
+            <state relative-caret-position="157">
+              <caret line="221" column="22" lean-forward="true" selection-start-line="221" selection-start-column="22" selection-end-line="221" selection-end-column="22" />
               <folding>
-                <element signature="e#3521#4035#0" expanded="false" />
-                <element signature="e#4090#4608#0" expanded="false" />
-                <element signature="e#4657#4703#0" expanded="false" />
-                <element signature="e#4722#4903#0" expanded="false" />
-                <marker date="1526709506778" expanded="true" signature="133:1218" ph="..." />
-                <marker date="1526709506778" expanded="true" signature="187:329" ph="..." />
-                <marker date="1526709506778" expanded="true" signature="371:973" ph="..." />
-                <marker date="1526709506778" expanded="true" signature="402:564" ph="..." />
-                <marker date="1526709506778" expanded="true" signature="509:539" ph="..." />
-                <marker date="1526709506778" expanded="true" signature="611:755" ph="..." />
-                <marker date="1526709506778" expanded="true" signature="806:954" ph="..." />
-                <marker date="1526709506778" expanded="true" signature="898:928" ph="..." />
-                <marker date="1526709506778" expanded="true" signature="1086:1099" ph="..." />
-                <marker date="1526709506778" expanded="true" signature="1256:1627" ph="..." />
-                <marker date="1526709506778" expanded="true" signature="1276:1612" ph="..." />
-                <marker date="1526709506778" expanded="true" signature="1300:1517" ph="..." />
-                <marker date="1526709506778" expanded="true" signature="1321:1492" ph="..." />
-                <marker date="1526709506778" expanded="true" signature="1566:1591" ph="..." />
-                <marker date="1526709506778" expanded="true" signature="2185:2588" ph="..." />
-                <marker date="1526709506778" expanded="true" signature="2222:2235" ph="..." />
+                <element signature="e#2881#3345#0" expanded="false" />
+                <element signature="e#3396#3864#0" expanded="false" />
+                <element signature="e#4599#5496#0" expanded="false" />
+                <element signature="e#5551#5680#0" expanded="false" />
+                <element signature="e#5729#5775#0" expanded="false" />
+                <element signature="n#!!block;n#deleteTaskTr#0" expanded="false" />
+                <element signature="n#!!block;n#editTask#0" expanded="false" />
+                <marker date="1526803681426" expanded="true" signature="119:1775" ph="..." />
+                <marker date="1526803681426" expanded="true" signature="183:658" ph="..." />
+                <marker date="1526803681426" expanded="true" signature="214:360" ph="..." />
+                <marker date="1526803681426" expanded="true" signature="407:520" ph="..." />
+                <marker date="1526803681426" expanded="true" signature="473:499" ph="..." />
+                <marker date="1526803681426" expanded="true" signature="692:708" ph="..." />
+                <marker date="1526803681426" expanded="true" signature="709:1764" ph="..." />
+                <marker date="1526803681426" expanded="true" signature="736:852" ph="..." />
+                <marker date="1526803681426" expanded="true" signature="805:831" ph="..." />
+                <marker date="1526803681426" expanded="true" signature="894:1532" ph="..." />
+                <marker date="1526803681426" expanded="true" signature="946:1088" ph="..." />
+                <marker date="1526803681426" expanded="true" signature="1033:1063" ph="..." />
+                <marker date="1526803681426" expanded="true" signature="1157:1301" ph="..." />
+                <marker date="1526803681426" expanded="true" signature="1368:1513" ph="..." />
+                <marker date="1526803681426" expanded="true" signature="1458:1488" ph="..." />
+                <marker date="1526803681426" expanded="true" signature="1560:1573" ph="..." />
+                <marker date="1526803681426" expanded="true" signature="1813:2129" ph="..." />
+                <marker date="1526803681426" expanded="true" signature="1829:2118" ph="..." />
+                <marker date="1526803681426" expanded="true" signature="1849:2044" ph="..." />
+                <marker date="1526803681426" expanded="true" signature="1866:2023" ph="..." />
+                <marker date="1526803681426" expanded="true" signature="2080:2101" ph="..." />
+                <marker date="1526803681426" expanded="true" signature="4084:4290" ph="..." />
+                <marker date="1526803681426" expanded="true" signature="4084:4497" ph="..." />
               </folding>
             </state>
           </provider>
@@ -196,7 +199,6 @@
       <find>a</find>
       <find>ul li</find>
       <find>secondList</find>
-      <find>select</find>
       <find>td</find>
       <find>input</find>
       <find>td input</find>
@@ -204,6 +206,8 @@
       <find>img</find>
       <find>day</find>
       <find>week</find>
+      <find>select</find>
+      <find>appointSender</find>
     </findStrings>
     <replaceStrings>
       <replace>receiver-layout</replace>
@@ -211,6 +215,7 @@
       <replace>second-list</replace>
       <replace>week</replace>
       <replace>month</replace>
+      <replace>appointSender</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -225,7 +230,6 @@
         <option value="$PROJECT_DIR$/login.html" />
         <option value="$PROJECT_DIR$/js/index.js" />
         <option value="$PROJECT_DIR$/js/leopardSdk.js" />
-        <option value="$PROJECT_DIR$/js/config.js" />
         <option value="$PROJECT_DIR$/js/delete.js" />
         <option value="$PROJECT_DIR$/task.js" />
         <option value="$PROJECT_DIR$/js/admin.js" />
@@ -241,14 +245,15 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/message.html" />
         <option value="$PROJECT_DIR$/js/sideBar.js" />
-        <option value="$PROJECT_DIR$/js/manageSDK.js" />
         <option value="$PROJECT_DIR$/js/receiver.js" />
         <option value="$PROJECT_DIR$/js/receiverGroup.js" />
-        <option value="$PROJECT_DIR$/js/message.js" />
         <option value="$PROJECT_DIR$/receiver.html" />
-        <option value="$PROJECT_DIR$/css/index.css" />
-        <option value="$PROJECT_DIR$/js/task.js" />
+        <option value="$PROJECT_DIR$/js/config.js" />
         <option value="$PROJECT_DIR$/task.html" />
+        <option value="$PROJECT_DIR$/js/message.js" />
+        <option value="$PROJECT_DIR$/css/index.css" />
+        <option value="$PROJECT_DIR$/js/manageSDK.js" />
+        <option value="$PROJECT_DIR$/js/task.js" />
       </list>
     </option>
   </component>
@@ -265,8 +270,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-172" />
-    <option name="y" value="-19" />
+    <option name="x" value="115" />
+    <option name="y" value="256" />
     <option name="width" value="1219" />
     <option name="height" value="679" />
   </component>
@@ -382,12 +387,12 @@
       <workItem from="1525580710777" duration="15776000" />
       <workItem from="1525833725388" duration="2790000" />
       <workItem from="1526213069836" duration="5642000" />
-      <workItem from="1526436835011" duration="50776000" />
+      <workItem from="1526436835011" duration="60792000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="151812000" />
+    <option name="totallyTimeSpent" value="161828000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -395,12 +400,12 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20044877" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7645875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -439,7 +444,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="16" />
+      <option name="time" value="18" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -638,13 +643,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="24" lean-forward="true" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/admin.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="529">
@@ -836,105 +834,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/manageSDK.js">
+    <entry file="file://$PROJECT_DIR$/js/config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-179">
-          <caret line="97" column="31" lean-forward="false" selection-start-line="97" selection-start-column="31" selection-end-line="97" selection-end-column="31" />
-          <folding>
-            <element signature="n#!!block;n#receiverList#0" expanded="false" />
-            <element signature="n#!!block;n#deleteReceiver#0" expanded="false" />
-            <element signature="n#!!block;n#modifyReceiver#0" expanded="false" />
-            <element signature="n#!!block;n#groupList#0" expanded="false" />
-            <element signature="n#!!block;n#addReceiverGroup#0" expanded="false" />
-            <element signature="n#!!block;n#modifyReceiverGroup#0" expanded="false" />
-            <element signature="n#!!block;n#getGroup#0" expanded="false" />
-            <element signature="n#!!block;n#deleteReceiverGroup#0" expanded="false" />
-            <element signature="n#!!block;n#messageList#0" expanded="false" />
-            <element signature="n#!!block;n#addMessage#0" expanded="false" />
-            <element signature="n#!!block;n#modifyMessage#0" expanded="false" />
-            <element signature="n#!!block;n#deleteMessage#0" expanded="false" />
-            <element signature="n#!!block;n#taskList#0" expanded="false" />
-            <element signature="n#!!block;n#addTask#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="39" lean-forward="true" selection-start-line="0" selection-start-column="39" selection-end-line="0" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/message.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1123">
-          <caret line="47" column="18" lean-forward="false" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
+        <state relative-caret-position="343">
+          <caret line="41" column="30" lean-forward="false" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
           <folding>
-            <marker date="1526709948492" expanded="true" signature="120:692" ph="..." />
-            <marker date="1526709948492" expanded="true" signature="173:314" ph="..." />
-            <marker date="1526709948492" expanded="true" signature="341:363" ph="..." />
-            <marker date="1526709948492" expanded="true" signature="341:434" ph="..." />
-            <marker date="1526709948492" expanded="true" signature="572:585" ph="..." />
-            <marker date="1526709948492" expanded="true" signature="729:1045" ph="..." />
-            <marker date="1526709948492" expanded="true" signature="749:1030" ph="..." />
-            <marker date="1526709948492" expanded="true" signature="773:941" ph="..." />
-            <marker date="1526709948492" expanded="true" signature="794:916" ph="..." />
-            <marker date="1526709948492" expanded="true" signature="984:1009" ph="..." />
-            <marker date="1526709948492" expanded="true" signature="1376:1667" ph="..." />
-            <marker date="1526709948492" expanded="true" signature="1409:1422" ph="..." />
+            <marker date="1526802347379" expanded="true" signature="120:692" ph="..." />
+            <marker date="1526802347379" expanded="true" signature="173:314" ph="..." />
+            <marker date="1526802347379" expanded="true" signature="341:363" ph="..." />
+            <marker date="1526802347379" expanded="true" signature="341:434" ph="..." />
+            <marker date="1526802347379" expanded="true" signature="572:585" ph="..." />
+            <marker date="1526802347379" expanded="true" signature="729:1045" ph="..." />
+            <marker date="1526802347379" expanded="true" signature="749:1030" ph="..." />
+            <marker date="1526802347379" expanded="true" signature="773:941" ph="..." />
+            <marker date="1526802347379" expanded="true" signature="794:916" ph="..." />
+            <marker date="1526802347379" expanded="true" signature="984:1009" ph="..." />
+            <marker date="1526802347379" expanded="true" signature="1376:1652" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/task.js">
+    <entry file="file://$PROJECT_DIR$/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-510">
-          <caret line="130" column="0" lean-forward="false" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
-          <folding>
-            <element signature="e#2551#3065#0" expanded="false" />
-            <element signature="e#3120#3638#0" expanded="false" />
-            <element signature="e#3798#4195#0" expanded="false" />
-            <element signature="e#4255#5152#0" expanded="false" />
-            <element signature="e#5207#5336#0" expanded="false" />
-            <element signature="e#5385#5431#0" expanded="false" />
-            <element signature="e#5449#5631#0" expanded="false" />
-            <marker date="1526719783327" expanded="true" signature="119:1790" ph="..." />
-            <marker date="1526719783327" expanded="true" signature="183:578" ph="..." />
-            <marker date="1526719783327" expanded="true" signature="214:312" ph="..." />
-            <marker date="1526719783327" expanded="true" signature="359:456" ph="..." />
-            <marker date="1526719783327" expanded="true" signature="612:628" ph="..." />
-            <marker date="1526719783327" expanded="true" signature="629:1779" ph="..." />
-            <marker date="1526719783327" expanded="true" signature="656:996" ph="..." />
-            <marker date="1526719783327" expanded="true" signature="731:975" ph="..." />
-            <marker date="1526719783327" expanded="true" signature="1038:1674" ph="..." />
-            <marker date="1526719783327" expanded="true" signature="1090:1232" ph="..." />
-            <marker date="1526719783327" expanded="true" signature="1177:1207" ph="..." />
-            <marker date="1526719783327" expanded="true" signature="1301:1445" ph="..." />
-            <marker date="1526719783327" expanded="true" signature="1512:1655" ph="..." />
-            <marker date="1526719783327" expanded="true" signature="1600:1630" ph="..." />
-            <marker date="1526719783327" expanded="true" signature="1828:2142" ph="..." />
-            <marker date="1526719783327" expanded="true" signature="1844:2131" ph="..." />
-            <marker date="1526719783327" expanded="true" signature="1864:2057" ph="..." />
-            <marker date="1526719783327" expanded="true" signature="1881:2036" ph="..." />
-            <marker date="1526719783327" expanded="true" signature="2093:2114" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="38" column="8" lean-forward="true" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+        <state relative-caret-position="198">
+          <caret line="127" column="26" lean-forward="true" selection-start-line="127" selection-start-column="26" selection-end-line="127" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/receiverGroup.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1088">
-          <caret line="78" column="62" lean-forward="false" selection-start-line="78" selection-start-column="62" selection-end-line="78" selection-end-column="62" />
+        <state relative-caret-position="346">
+          <caret line="80" column="22" lean-forward="true" selection-start-line="80" selection-start-column="22" selection-end-line="80" selection-end-column="22" />
           <folding>
             <element signature="e#3521#4035#0" expanded="false" />
             <element signature="e#4090#4608#0" expanded="false" />
             <element signature="e#4657#4703#0" expanded="false" />
             <element signature="e#4722#4903#0" expanded="false" />
+            <element signature="n#!!block;n#receiverGroupConfirm#0" expanded="false" />
             <marker date="1526709506778" expanded="true" signature="133:1218" ph="..." />
             <marker date="1526709506778" expanded="true" signature="187:329" ph="..." />
             <marker date="1526709506778" expanded="true" signature="371:973" ph="..." />
@@ -955,20 +900,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/index.css">
+    <entry file="file://$PROJECT_DIR$/js/manageSDK.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="838">
-          <caret line="373" column="33" lean-forward="true" selection-start-line="373" selection-start-column="33" selection-end-line="373" selection-end-column="33" />
-          <folding />
+        <state relative-caret-position="562">
+          <caret line="234" column="24" lean-forward="false" selection-start-line="234" selection-start-column="24" selection-end-line="234" selection-end-column="24" />
+          <folding>
+            <element signature="n#!!block;n#receiverList#0" expanded="false" />
+            <element signature="n#!!block;n#deleteReceiver#0" expanded="false" />
+            <element signature="n#!!block;n#modifyReceiver#0" expanded="false" />
+            <element signature="n#!!block;n#groupList#0" expanded="false" />
+            <element signature="n#!!block;n#addReceiverGroup#0" expanded="false" />
+            <element signature="n#!!block;n#modifyReceiverGroup#0" expanded="false" />
+            <element signature="n#!!block;n#getGroup#0" expanded="false" />
+            <element signature="n#!!block;n#deleteReceiverGroup#0" expanded="false" />
+            <element signature="n#!!block;n#messageList#0" expanded="false" />
+            <element signature="n#!!block;n#addMessage#0" expanded="false" />
+            <element signature="n#!!block;n#modifyMessage#0" expanded="false" />
+            <element signature="n#!!block;n#deleteMessage#0" expanded="false" />
+            <element signature="n#!!block;n#taskList#0" expanded="false" />
+            <element signature="n#!!block;n#addTask#0" expanded="false" />
+            <element signature="n#!!block;n#deleteTask#0" expanded="false" />
+            <element signature="n#!!block;n#getTask#0" expanded="false" />
+            <element signature="n#!!block;n#senderList#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="31" column="36" lean-forward="true" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/task.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="444" column="53" lean-forward="false" selection-start-line="444" selection-start-column="53" selection-end-line="444" selection-end-column="53" />
+        <state relative-caret-position="4389">
+          <caret line="621" column="10" lean-forward="false" selection-start-line="621" selection-start-column="10" selection-end-line="621" selection-end-column="10" />
           <folding>
-            <element signature="n#div#0;n#div#2;n#!!top" expanded="false" />
             <element signature="n#ul#0;n#div#0;n#div#2;n#!!top" expanded="false" />
             <element signature="n#div#0;n#div#1;n#div#2;n#!!top" expanded="false" />
             <element signature="n#div#0;n#div#0;n#div#1;n#div#2;n#!!top" expanded="false" />
@@ -1033,6 +1006,45 @@
             <element signature="e#26029#26239#0" expanded="false" />
             <element signature="e#26293#26504#0" expanded="false" />
             <element signature="e#26559#26771#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/task.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="221" column="22" lean-forward="true" selection-start-line="221" selection-start-column="22" selection-end-line="221" selection-end-column="22" />
+          <folding>
+            <element signature="e#2881#3345#0" expanded="false" />
+            <element signature="e#3396#3864#0" expanded="false" />
+            <element signature="e#4599#5496#0" expanded="false" />
+            <element signature="e#5551#5680#0" expanded="false" />
+            <element signature="e#5729#5775#0" expanded="false" />
+            <element signature="n#!!block;n#deleteTaskTr#0" expanded="false" />
+            <element signature="n#!!block;n#editTask#0" expanded="false" />
+            <marker date="1526803681426" expanded="true" signature="119:1775" ph="..." />
+            <marker date="1526803681426" expanded="true" signature="183:658" ph="..." />
+            <marker date="1526803681426" expanded="true" signature="214:360" ph="..." />
+            <marker date="1526803681426" expanded="true" signature="407:520" ph="..." />
+            <marker date="1526803681426" expanded="true" signature="473:499" ph="..." />
+            <marker date="1526803681426" expanded="true" signature="692:708" ph="..." />
+            <marker date="1526803681426" expanded="true" signature="709:1764" ph="..." />
+            <marker date="1526803681426" expanded="true" signature="736:852" ph="..." />
+            <marker date="1526803681426" expanded="true" signature="805:831" ph="..." />
+            <marker date="1526803681426" expanded="true" signature="894:1532" ph="..." />
+            <marker date="1526803681426" expanded="true" signature="946:1088" ph="..." />
+            <marker date="1526803681426" expanded="true" signature="1033:1063" ph="..." />
+            <marker date="1526803681426" expanded="true" signature="1157:1301" ph="..." />
+            <marker date="1526803681426" expanded="true" signature="1368:1513" ph="..." />
+            <marker date="1526803681426" expanded="true" signature="1458:1488" ph="..." />
+            <marker date="1526803681426" expanded="true" signature="1560:1573" ph="..." />
+            <marker date="1526803681426" expanded="true" signature="1813:2129" ph="..." />
+            <marker date="1526803681426" expanded="true" signature="1829:2118" ph="..." />
+            <marker date="1526803681426" expanded="true" signature="1849:2044" ph="..." />
+            <marker date="1526803681426" expanded="true" signature="1866:2023" ph="..." />
+            <marker date="1526803681426" expanded="true" signature="2080:2101" ph="..." />
+            <marker date="1526803681426" expanded="true" signature="4084:4290" ph="..." />
+            <marker date="1526803681426" expanded="true" signature="4084:4497" ph="..." />
           </folding>
         </state>
       </provider>

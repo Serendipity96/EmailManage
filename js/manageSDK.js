@@ -191,18 +191,80 @@ function taskList(callback) {
     });
 }
 
-function addTask(taskName, taskMessage,taskCron,taskSender,receiverIds,callback) {
+function addTask(taskName, messageId,taskCron,senderId,groupIds,callback) {
     $.ajax({
         method: 'POST',
         url: server + "task/add",
         data: {
-            taskName: taskName,
-            taskMessage: taskMessage,
-            taskCron:taskCron,
-            taskSender:taskSender,
-            receiverIds:receiverIds
+            name: taskName,
+            messageId: messageId,
+            cron:taskCron,
+            senderId:senderId,
+            groupId:groupIds
+        },
+        traditional: true
+    }).done(function (data) {
+        callback.call(this, data);
+    });
+}
+
+function deleteTask(id,callback) {
+    $.ajax({
+        method: 'GET',
+        url: server + "task/delete",
+        data: {
+            id: id
         },
     }).done(function (data) {
         callback.call(this, data);
+    });
+}
+
+function modifyTask(id,taskName, messageId,taskCron,senderId,groupIds,callback) {
+    $.ajax({
+        method: 'POST',
+        url: server + "task/set",
+        data: {
+            id:id,
+            name: taskName,
+            messageId: messageId,
+            cron:taskCron,
+            senderId:senderId,
+            groupId:groupIds
+        },
+        traditional:true
+    }).done(function (data) {
+        callback.call(this, data);
+    });
+}
+
+function getTask(id,callback) {
+    $.ajax({
+        method: "GET",
+        url: server + "task/get",
+        data:{
+            id:id
+        }
+    }).done(function (data) {
+        if (data.status === 200) {
+            let {result} = data;
+            callback.call(this, result)
+        } else {
+            alert(404)
+        }
+    });
+}
+
+function senderList(callback) {
+    $.ajax({
+        method: "GET",
+        url: server + "sender/list",
+    }).done(function (data) {
+        if (data.status === 200) {
+            let {result} = data;
+            callback.call(this, result)
+        } else {
+            alert(404)
+        }
     });
 }

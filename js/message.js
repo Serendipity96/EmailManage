@@ -39,7 +39,7 @@ let messageController = {
                 list.map((result) => {
                     $('#message-tbody').append(`
                 <tr>
-                    <td style="display: none">${result.id}</td>
+                    <td hidden>${result.id}</td>
                     <td>${result.subject}</td>
                     <td><span class="edit" onclick="editMessage(this)">修改</span>/<span class="delete" onclick="deleteMessageTr(${result.id})" >删除</span></td>
                 </tr>

@@ -109,6 +109,7 @@ ul li span {
 .receiverGroup-layout input[type=submit],
 .message-layout input[type=submit],
 .task-layout button,
+.task-layout input[type=submit],
 .administrators-layout input[type=submit],
 .button-container button {
     margin: 0 50px;
@@ -125,6 +126,7 @@ ul li span {
 .receiverGroup-layout input[type=submit]:hover,
 .message-layout input[type=submit]:hover,
 .task-layout button:hover,
+.task-layout input[type=submit]:hover,
 .administrators-layout input[type=submit]:hover,
 .button-container button:hover {
     background: #1989FA;
@@ -266,9 +268,10 @@ ul li span {
     margin-left: -12px;
 }
 
-.appointTransmitter {
+.taskMessage,.appointSender {
     margin-left: 5px;
     width: 220px;
+    height: 33px;
     border: 1px solid #1989FA;
     margin-bottom: -10px;
 }

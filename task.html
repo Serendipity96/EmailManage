@@ -11,8 +11,8 @@
             <li id="minute"><span>分钟</span></li>
             <li id="hour"><span>小时</span></li>
             <li id="day"><span>日</span></li>
-            <li id="week"><span>周</span></li>
             <li id="month"><span>月</span></li>
+            <li id="week"><span>周</span></li>
             <li id="year"><span>年</span></li>
         </ul>
     </div>
@@ -352,48 +352,6 @@
             </div>
 
         </div>
-        <div class="week-panel" style="display: none">
-            <div class="line">
-                <input type="radio" checked="checked" name="week" value="weekRow1">
-                周 允许的通配符 [ * ]
-            </div>
-            <div class="line">
-                <input type="radio" name="week" value="weekRow2">
-                不指定
-            </div>
-            <div class="line">
-                <input type="radio" name="week" value="weekRow3">
-                周期从星期
-                <input class="numberspinner" style="width: 25px;" data-options="min:1,max:58" value="1"
-                       id="weekStart_0">
-                -
-                <input class="numberspinner" style="width: 25px;" data-options="min:2,max:59" value="2"
-                       id="weekEnd_0">
-            </div>
-            <div class="line">
-                <input type="radio" name="week" value="weekRow4">
-                从
-                <input class="numberspinner" style="width: 25px;" data-options="min:1,max:5" value="1"
-                       id="weekStart_1">
-                周的星期
-                <input class="numberspinner" style="width: 25px;" data-options="min:1,max:7" value="1"
-                       id="weekEnd_1">
-                开始
-            </div>
-            <div class="line">
-                <input type="radio" name="week" id="week_appoint" value="weekRow5">
-                指定
-            </div>
-            <div class="week-list">
-                <input type="checkbox" disabled="disabled" value="1">01
-                <input type="checkbox" disabled="disabled" value="2">02
-                <input type="checkbox" disabled="disabled" value="3">03
-                <input type="checkbox" disabled="disabled" value="4">04
-                <input type="checkbox" disabled="disabled" value="5">05
-                <input type="checkbox" disabled="disabled" value="6">06
-                <input type="checkbox" disabled="disabled" value="7">07
-            </div>
-        </div>
         <div class="month-panel" style="display: none">
             <div class="line">
                 <input type="radio" checked="checked" name="month" value="monthRow1">
@@ -440,6 +398,48 @@
                 <input type="checkbox" disabled="disabled" value="10">10
                 <input type="checkbox" disabled="disabled" value="11">11
                 <input type="checkbox" disabled="disabled" value="12">12
+            </div>
+        </div>
+        <div class="week-panel" style="display: none">
+            <div class="line">
+                <input type="radio" name="week" value="weekRow1">
+                周 允许的通配符 [ * ]
+            </div>
+            <div class="line">
+                <input type="radio" name="week" checked="checked" value="weekRow2">
+                不指定
+            </div>
+            <div class="line">
+                <input type="radio" name="week" value="weekRow3">
+                周期从星期
+                <input class="numberspinner" style="width: 25px;" data-options="min:1,max:58" value="1"
+                       id="weekStart_0">
+                -
+                <input class="numberspinner" style="width: 25px;" data-options="min:2,max:59" value="2"
+                       id="weekEnd_0">
+            </div>
+            <div class="line">
+                <input type="radio" name="week" value="weekRow4">
+                从
+                <input class="numberspinner" style="width: 25px;" data-options="min:1,max:5" value="1"
+                       id="weekStart_1">
+                周的星期
+                <input class="numberspinner" style="width: 25px;" data-options="min:1,max:7" value="1"
+                       id="weekEnd_1">
+                开始
+            </div>
+            <div class="line">
+                <input type="radio" name="week" id="week_appoint" value="weekRow5">
+                指定
+            </div>
+            <div class="week-list">
+                <input type="checkbox" disabled="disabled" value="1">01
+                <input type="checkbox" disabled="disabled" value="2">02
+                <input type="checkbox" disabled="disabled" value="3">03
+                <input type="checkbox" disabled="disabled" value="4">04
+                <input type="checkbox" disabled="disabled" value="5">05
+                <input type="checkbox" disabled="disabled" value="6">06
+                <input type="checkbox" disabled="disabled" value="7">07
             </div>
         </div>
         <div class="year-panel" style="display: none">
@@ -581,10 +581,8 @@
             hourValue = hourArr.toString();
         }
 
-        if (dayStr === 'dayRow1') {
+        if (dayStr === 'dayRow1' || dayStr === 'dayRow2') {
             dayValue = '*';
-        } else if (dayStr === 'dayRow2') {
-            dayValue = '?'
         } else if (dayStr === 'dayRow3') {
             dayValue = $('#dayStart_0').val() + '-' + $('#dayEnd_0').val();
         } else if (dayStr === 'dayRow4') {
@@ -619,10 +617,8 @@
             weekValue = weekArr.toString();
         }
 
-        if (monthStr === 'monthRow1') {
+        if (monthStr === 'monthRow1'||monthStr === 'monthRow2') {
             monthValue = '*';
-        } else if (monthStr === 'monthRow2') {
-            monthValue = '?'
         } else if (monthStr === 'monthRow3') {
             monthValue = $('#monthStart_0').val() + '-' + $('#monthEnd_0').val();
         } else if (monthStr === 'monthRow4') {
@@ -638,16 +634,15 @@
             monthValue = monthArr.toString();
         }
 
-        if (yearStr === 'yearRow1') {
-            yearValue = ' ';
-        } else if (yearStr === 'yearRow2') {
-            yearValue = '*'
+        if (yearStr === 'yearRow1' || yearStr === 'yearRow2') {
+            yearValue = '*';
         } else if (yearStr === 'yearRow3') {
             yearValue = $('#yearStart_0').val() + '-' + $('#yearEnd_0').val();
         }
 
-        console.log(secondValue + ' ' + minuteValue + ' ' + hourValue + ' '
-            + dayValue + ' ' + weekValue + ' ' + monthValue + ' ' + yearValue);
+        let cronValue = secondValue + ' ' + minuteValue + ' ' + hourValue + ' '
+            + dayValue + ' ' + monthValue + ' ' + weekValue + ' ' + yearValue;
+        $("input[name='taskCron']").val(cronValue);
 
         $('.chooseCron-layout-bg').hide();
         $('.chooseCron-container').hide();
