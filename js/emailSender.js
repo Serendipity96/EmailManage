@@ -20,8 +20,8 @@ let emailSenderController = {
             senderList((list) => {
                 $('#emailSender-tbody').empty();
                 list.map((result) => {
-                    let alive = undefined;
-                    if (result.alive === 'true') {
+                    let alive = false;
+                    if (result.alive === true) {
                         alive = '在线'
                     } else {
                         alive = '离线'
