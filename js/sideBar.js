@@ -5,7 +5,6 @@ $li.on('click', function (currentClass) {
         $(this).siblings().removeClass('active');
         let html = this.id + ".html";
         let controller = this.id+'Controller';
-        console.log(controller)
         $('#layout').load(html, function () {
             eval(controller).init();
         });
