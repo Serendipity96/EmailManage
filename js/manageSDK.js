@@ -268,3 +268,56 @@ function senderList(callback) {
         }
     });
 }
+
+function accountList(callback) {
+    $.ajax({
+        method: "GET",
+        url: server + "/account/list",
+    }).done(function (data) {
+        if (data.status === 200) {
+            let {result} = data;
+            callback.call(this, result)
+        } else {
+            alert(404)
+        }
+    });
+}
+
+function addAccount(username,password,callback) {
+    $.ajax({
+        method: 'POST',
+        url: server + "account/add",
+        data: {
+            username: username,
+            password: password
+        },
+    }).done(function (data) {
+        callback.call(this, data);
+    });
+}
+
+function deleteAccount(id,callback) {
+    $.ajax({
+        method: 'GET',
+        url: server + "account/delete",
+        data: {
+            id: id
+        },
+    }).done(function (data) {
+        callback.call(this, data);
+    });
+}
+
+function modifyAccount(id, username, password,callback) {
+    $.ajax({
+        method: 'POST',
+        url: server + "account/set",
+        data: {
+            id:id,
+            username: username,
+            password: password
+        },
+    }).done(function (data) {
+        callback.call(this, data);
+    });
+}

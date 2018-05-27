@@ -77,7 +77,7 @@ ul li span {
 .message-layout h2,
 .task-layout h2,
 .emailSender-layout h2,
-.addAdministrators h2 {
+.addAccount h2 {
     margin: 50px 0 30px 50px;
     font-weight: lighter;
 }
@@ -89,7 +89,7 @@ ul li span {
     margin: 0 0 0 50px;
 }
 
-.administrators-layout .label-first {
+.account-layout .label-first {
     margin: 0 0 0 50px;
 }
 
@@ -97,7 +97,7 @@ ul li span {
 .receiverGroup-layout input,
 .message-layout input,
 .task-layout input,
-.administrators-layout input {
+.account-layout input {
     margin: 10px;
     padding: 5px;
     border: 1px solid rgba(25, 137, 250, .4);
@@ -110,7 +110,7 @@ ul li span {
 .message-layout input[type=submit],
 .task-layout button,
 .task-layout input[type=submit],
-.administrators-layout input[type=submit],
+.account-layout input[type=submit],
 .button-container button {
     margin: 0 50px;
     padding: 7px 15px;
@@ -127,7 +127,7 @@ ul li span {
 .message-layout input[type=submit]:hover,
 .task-layout button:hover,
 .task-layout input[type=submit]:hover,
-.administrators-layout input[type=submit]:hover,
+.account-layout input[type=submit]:hover,
 .button-container button:hover {
     background: #1989FA;
     color: white;
@@ -137,7 +137,7 @@ ul li span {
 .manageGroup,
 .addMessage,
 .publishTask,
-.addAdministrators {
+.addAccount {
     padding-bottom: 40px;
     border-bottom: 1px solid #ccc;
 }
@@ -146,7 +146,7 @@ ul li span {
 .messageContent,
 .taskContent,
 .emailSenderContent,
-.administratorsContent {
+.accountContent {
     margin: 50px;
 }
 
@@ -154,7 +154,7 @@ ul li span {
 .messageContent .name-td, .operate-td,
 .taskContent .name-td, .email-td, .operate-td,
 .emailSenderContent .name-td, .email-td, .operate-td,
-.administratorsContent .name-td, .operate-td {
+.accountContent .name-td, .operate-td {
     font-weight: 500;
     padding-right: 300px;
     padding-bottom: 30px;
@@ -166,7 +166,7 @@ ul li span {
 }
 
 .messageContent .name-td,
-.administratorsContent .name-td {
+.accountContent .name-td {
     padding-right: 300px;
 }
 
@@ -174,7 +174,7 @@ ul li span {
 .messageContent td,
 .taskContent td,
 .emailSenderContent td,
-.administratorsContent td {
+.accountContent td {
     padding: 10px 0;
     border-bottom: 1px solid #ccc;
 }
@@ -182,7 +182,7 @@ ul li span {
 .receiverContent td input,
 .messageContent td input,
 .taskContent td input,
-.administratorsContent td input {
+.accountContent td input {
     margin: 0;
     padding: 5px;
     border: 1px solid rgba(25, 137, 250, .4);
@@ -193,21 +193,21 @@ ul li span {
 .receiverContent td span,
 .messageContent td span,
 .taskContent td span,
-.administratorsContent td span {
+.accountContent td span {
     cursor: pointer;
 }
 
 .receiverContent td .edit:hover,
 .messageContent td .edit:hover,
 .taskContent td .edit:hover,
-.administratorsContent td .edit:hover {
+.accountContent td .edit:hover {
     color: #1989FA;
 }
 
 .receiverContent td .delete:hover,
 .messageContent td .delete:hover,
 .taskContent td .delete:hover,
-.administratorsContent td .edit:hover {
+.accountContent td .delete:hover {
     color: #e55c5c;
 }
 
