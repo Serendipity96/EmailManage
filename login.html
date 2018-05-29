@@ -9,22 +9,22 @@
 <h1>邮 件 信 息 发 布 系 统</h1>
 <div class="container">
     <h2 class="title">登 录</h2>
-    <div class="input-field">
-        <img src="./img/user.png" alt="">
-        <input placeholder="用户名" id="text" type="text">
-    </div>
-    <div class="input-field">
-        <img src="./img/password.png" alt="">
-        <input placeholder="密码" id="password" type="password">
-    </div>
-    <span class="btn-submit" onclick=javascript:jump()>
-        <input type="submit" value="登 录">
+        <div class="input-field">
+            <img src="./img/user.png" alt="">
+            <input placeholder="用户名" name="username" type="text">
+        </div>
+        <div class="input-field">
+            <img src="./img/password.png" alt="">
+            <input placeholder="密码" name="password" type="password">
+        </div>
+        <span class="btn-submit" id="submit">
+        <input type="submit"  value="登 录">
     </span>
 </div>
-<script>
-    function jump() {
-        window.location.href = "http://localhost:63343/EmailManage/index.html";
-    }
-</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/vendor/md5.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/manageSDK.js"></script>
+<script src="js/login.js"></script>
 </body>
 </html>

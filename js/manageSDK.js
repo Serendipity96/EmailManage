@@ -80,12 +80,12 @@ function addReceiverGroup(groupName, receiverGroupIds, callback) {
     });
 }
 
-function modifyReceiverGroup(id,groupName, receiverGroupIds, callback) {
+function modifyReceiverGroup(id, groupName, receiverGroupIds, callback) {
     $.ajax({
         method: 'POST',
         url: server + "group/set",
         data: {
-            id:id,
+            id: id,
             name: groupName,
             receiverId: receiverGroupIds
         },
@@ -95,12 +95,12 @@ function modifyReceiverGroup(id,groupName, receiverGroupIds, callback) {
     });
 }
 
-function getGroup(id,callback) {
+function getGroup(id, callback) {
     $.ajax({
         method: "GET",
         url: server + "group/get",
-        data:{
-            id:id
+        data: {
+            id: id
         }
     }).done(function (data) {
         if (data.status === 200) {
@@ -151,12 +151,12 @@ function addMessage(subject, content, callback) {
     });
 }
 
-function modifyMessage(id,subject, content, callback) {
+function modifyMessage(id, subject, content, callback) {
     $.ajax({
         method: 'POST',
         url: server + "message/set",
         data: {
-            id:id,
+            id: id,
             subject: subject,
             content: content
         },
@@ -191,16 +191,16 @@ function taskList(callback) {
     });
 }
 
-function addTask(taskName, messageId,taskCron,senderId,groupIds,callback) {
+function addTask(taskName, messageId, taskCron, senderId, groupIds, callback) {
     $.ajax({
         method: 'POST',
         url: server + "task/add",
         data: {
             name: taskName,
             messageId: messageId,
-            cron:taskCron,
-            senderId:senderId,
-            groupId:groupIds
+            cron: taskCron,
+            senderId: senderId,
+            groupId: groupIds
         },
         traditional: true
     }).done(function (data) {
@@ -208,7 +208,7 @@ function addTask(taskName, messageId,taskCron,senderId,groupIds,callback) {
     });
 }
 
-function deleteTask(id,callback) {
+function deleteTask(id, callback) {
     $.ajax({
         method: 'GET',
         url: server + "task/delete",
@@ -220,30 +220,30 @@ function deleteTask(id,callback) {
     });
 }
 
-function modifyTask(id,taskName, messageId,taskCron,senderId,groupIds,callback) {
+function modifyTask(id, taskName, messageId, taskCron, senderId, groupIds, callback) {
     $.ajax({
         method: 'POST',
         url: server + "task/set",
         data: {
-            id:id,
+            id: id,
             name: taskName,
             messageId: messageId,
-            cron:taskCron,
-            senderId:senderId,
-            groupId:groupIds
+            cron: taskCron,
+            senderId: senderId,
+            groupId: groupIds
         },
-        traditional:true
+        traditional: true
     }).done(function (data) {
         callback.call(this, data);
     });
 }
 
-function getTask(id,callback) {
+function getTask(id, callback) {
     $.ajax({
         method: "GET",
         url: server + "task/get",
-        data:{
-            id:id
+        data: {
+            id: id
         }
     }).done(function (data) {
         if (data.status === 200) {
@@ -283,7 +283,7 @@ function accountList(callback) {
     });
 }
 
-function addAccount(username,password,callback) {
+function addAccount(username, password, callback) {
     $.ajax({
         method: 'POST',
         url: server + "account/add",
@@ -296,7 +296,7 @@ function addAccount(username,password,callback) {
     });
 }
 
-function deleteAccount(id,callback) {
+function deleteAccount(id, callback) {
     $.ajax({
         method: 'GET',
         url: server + "account/delete",
@@ -308,15 +308,37 @@ function deleteAccount(id,callback) {
     });
 }
 
-function modifyAccount(id, username, password,callback) {
+function modifyAccount(id, username, password, callback) {
     $.ajax({
         method: 'POST',
         url: server + "account/set",
         data: {
-            id:id,
+            id: id,
             username: username,
             password: password
         },
+    }).done(function (data) {
+        callback.call(this, data);
+    });
+}
+
+function login(username, password, callback) {
+    $.ajax({
+        method: "POST",
+        url: server + "login",
+        data: {
+            username: username,
+            password: password
+        }
+    }).done(function (data) {
+        callback.call(this, data);
+    });
+}
+
+function logout(callback) {
+    $.ajax({
+        method: 'GET',
+        url: server + "/logout",
     }).done(function (data) {
         callback.call(this, data);
     });
