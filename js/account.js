@@ -72,7 +72,8 @@ function addAccountItem(edit) {
 
     if (password !== '' && confirmPassword !== '') {
         if (password === confirmPassword) {
-            addAccount(username, password, function (data) {
+            let hashPwd = md5(password);
+            addAccount(username, hashPwd, function (data) {
                 $("input[type='text']").val('');
                 $("input[type='password']").val('');
                 accountController.view.reload();
@@ -119,7 +120,8 @@ function confirmAccount(edit) {
 
     if (password !== '' && confirmPassword !== '') {
         if (password === confirmPassword) {
-            modifyAccount(id, username, password, function (data) {
+            let hashPwd = md5(password);
+            modifyAccount(id, username, hashPwd, function (data) {
                 accountController.view.render();
                 accountController.view.reload();
             });
