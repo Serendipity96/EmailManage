@@ -138,19 +138,37 @@ function messageList(callback) {
     });
 }
 
-function addMessage(subject, content, callback) {
+function addMessage(subject, content,fileName,fileResult, callback) {
     $.ajax({
         method: 'POST',
         url: server + "message/add",
         data: {
             subject: subject,
-            content: content
+            content: content,
+            attachmentName:fileName,
+            attachmentPath:fileResult,
         },
     }).done(function (data) {
         callback.call(this, data);
     });
 }
 
+function fileUpLoad(file,callback) {
+    $.ajax({
+        method: 'POST',
+        url: server + "message/attachment",
+        contentType: false,
+        processData: false,
+        data: file
+    }).done(function (data) {
+        if (data.status === 200) {
+            let {result} = data;
+            callback.call(this, result)
+        } else {
+            alert(404)
+        }
+    });
+}
 function modifyMessage(id, subject, content, callback) {
     $.ajax({
         method: 'POST',
@@ -176,6 +194,7 @@ function deleteMessage(id, callback) {
         callback.call(this, data);
     });
 }
+
 
 function taskList(callback) {
     $.ajax({

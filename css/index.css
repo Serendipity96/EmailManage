@@ -133,6 +133,30 @@ ul li span {
     color: white;
 }
 
+.message-layout .upload {
+    margin: 0 0 0 30px;
+    padding: 6px 14px 7px 15px;
+    position: relative;
+    border: 1px solid rgba(25, 137, 250, .4);
+    border-radius: 5px;
+    text-decoration: none;
+    color: #1989FA;
+    cursor: pointer;
+}
+
+.message-layout .upload:hover {
+    background: #1989FA;
+    color: white;
+}
+
+.message-layout .fileInput {
+    width: 80px;
+    position: absolute;
+    left: -10px;
+    opacity: 0;
+    cursor: pointer;
+}
+
 .addReceiver,
 .manageGroup,
 .addMessage,
@@ -211,7 +235,6 @@ ul li span {
     color: #e55c5c;
 }
 
-
 .label-container {
     display: inline;
 }
@@ -261,7 +284,7 @@ ul li span {
     margin-left: -12px;
 }
 
-.taskMessage,.appointSender {
+.taskMessage, .appointSender {
     margin-left: 5px;
     width: 220px;
     height: 33px;
@@ -301,11 +324,13 @@ ul li span {
     top: 3%;
     right: 3%;
 }
+
 .chooseCron-container #addButton {
     position: absolute;
     top: 3%;
     right: 12%;
 }
+
 .chooseCron-container img:hover {
     cursor: pointer;
 }

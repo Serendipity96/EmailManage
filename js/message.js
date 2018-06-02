@@ -1,5 +1,7 @@
 let messageController = {
     view: {
+        fileName:'',
+        fileResult:'',
         el: '.message-layout',
         template: `
         <div class="addMessage">
@@ -13,6 +15,11 @@ let messageController = {
                 消息内容
                 <input name="content" type="text">
             </label>
+            
+            <a href="javascript:;" class="upload">选择文件
+                <input class="fileInput" name="fileResult" id="fileInput"  type="file" >
+            </a>
+            
             <input id="messageButton" onclick="addMessageItem(this)" class="button" value="添加" type="submit">
             <input style="display: none" id="messageConfirm" onclick="confirmMessage(this)" class="button" value="确认" type="submit">
         </div>
@@ -32,6 +39,21 @@ let messageController = {
         render(data) {
             let $el = $(this.el);
             $el.html(this.template);
+            let fileInput = document.getElementById('fileInput');
+            let file = this;
+            fileInput.addEventListener('change',function () {
+                let curFile = fileInput.files[0];
+                file.fileName = curFile.name;
+                if(curFile.length !== 0) {
+                    let formData = new FormData();
+                    formData.append('file',curFile);
+                    fileUpLoad(formData,function (result) {
+                        alert('上传成功！');
+                        file.fileResult = result;
+                    })
+                }
+            })
+
         },
         reload() {
             messageList(function (list) {
@@ -69,11 +91,15 @@ let messageController = {
 function addMessageItem(edit) {
     let messageSubject = $("input[name='subject']").val();
     let messageContent = $("input[name='content']").val();
-    addMessage(messageSubject, messageContent, function (data) {
+    let fileName = messageController.view.fileName;
+    let fileResult = messageController.view.fileResult;
+    console.log(fileName,fileResult)
+    addMessage(messageSubject, messageContent,fileName,fileResult ,function (data) {
         $("input[type='text']").val('');
         messageController.view.reload();
     });
 }
+
 function deleteMessageTr(id) {
     deleteMessage(id, function (data) {
         messageController.view.reload();
@@ -94,13 +120,15 @@ function editMessage(edit) {
         })
     })
 }
+
 function confirmMessage(edit) {
-        let id = $("input[name='id']").val();
-        let messageSubject = $("input[name='subject']").val();
-        let messageContent = $("input[name='content']").val();
-        modifyMessage(id, messageSubject, messageContent, function (data) {
-            $("input[type='text']").val('');
-            messageController.view.render();
-            messageController.view.reload();
-        });
+    let id = $("input[name='id']").val();
+    let messageSubject = $("input[name='subject']").val();
+    let messageContent = $("input[name='content']").val();
+    modifyMessage(id, messageSubject, messageContent, function (data) {
+        $("input[type='text']").val('');
+        messageController.view.render();
+        messageController.view.reload();
+    });
 }
+
