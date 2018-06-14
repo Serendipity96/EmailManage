@@ -93,11 +93,17 @@ function addMessageItem(edit) {
     let messageContent = $("input[name='content']").val();
     let fileName = messageController.view.fileName;
     let fileResult = messageController.view.fileResult;
-    console.log(fileName,fileResult)
-    addMessage(messageSubject, messageContent,fileName,fileResult ,function (data) {
-        $("input[type='text']").val('');
-        messageController.view.reload();
-    });
+    if(messageSubject === ''){
+        alert('消息名称不能为空')
+    }else if(messageContent === ''){
+        alert('消息内容不能空')
+    }else {
+        addMessage(messageSubject, messageContent,fileName,fileResult ,function (data) {
+            $("input[type='text']").val('');
+            messageController.view.reload();
+        });
+    }
+
 }
 
 function deleteMessageTr(id) {

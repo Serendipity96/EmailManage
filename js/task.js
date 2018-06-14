@@ -167,16 +167,25 @@ function addTaskItem() {
     let senderId = $('.appointSender').find("option:selected").val();
     let groupIds = [];
     let options = $('.select-people').find("option");
-    for (let i = 0; i < options.length; i++) {
-        let option = options.eq(i).val();
-        if (option !== undefined) {
-            groupIds.push(option);
+    if(taskName === ''){
+        alert('任务名称不能为空')
+    }else if(taskCron === ''){
+        alert('请选择Cron')
+    }else if(options.length === 0){
+        alert('请选择接收消息的组')
+    }else {
+        for (let i = 0; i < options.length; i++) {
+            let option = options.eq(i).val();
+            if (option !== undefined) {
+                groupIds.push(option);
+            }
         }
+        addTask(taskName, messageId, taskCron, senderId, groupIds, function () {
+            taskController.view.render();
+            taskController.view.reload();
+        })
     }
-    addTask(taskName, messageId, taskCron, senderId, groupIds, function () {
-        taskController.view.render();
-        taskController.view.reload();
-    })
+
 
 }
 function deleteTaskTr(id) {

@@ -70,10 +70,18 @@ let receiverController = {
 function addReceiverItem(edit) {
     let name = $("input[name='name']").val();
     let email = $("input[name='email']").val();
-    addReceiver(name, email, function (data) {
-        $("input[type='text']").val('');
-        receiverController.view.reload();
-    });
+    if(name === ''){
+        alert('姓名不能为空')
+    }else if (email === ''){
+        alert('Email不能为空')
+    }else if(email.indexOf("@") === -1){
+        alert('Email不合法')
+    }else {
+        addReceiver(name, email, function (data) {
+            $("input[type='text']").val('');
+            receiverController.view.reload();
+        });
+    }
 }
 
 function deleteReceiverTr(id) {

@@ -69,17 +69,25 @@ let receiverGroupController = {
                     let groupName = $("input[name='groupName']").val();
                     let receiverGroupIds = [];
                     let options = $('.select-people_0').find("option");
-                    for (let i = 0; i < options.length; i++) {
-                        let option = options.eq(i).val();
-                        if (option !== '') {
-                            receiverGroupIds.push(option);
+                    if (groupName === '') {
+                        alert('请输入组名称')
+                    } else if (options.length === 0) {
+                        alert('请添加接收消息的人')
+                    } else {
+                        for (let i = 0; i < options.length; i++) {
+                            let option = options.eq(i).val();
+                            if (option !== '') {
+                                receiverGroupIds.push(option);
+                            }
                         }
+                        addReceiverGroup(groupName, receiverGroupIds, function () {
+                            receiverGroupController.view.render();
+                            receiverGroupController.view.reload();
+                        })
+                        $("input[name='groupName']").val('');
                     }
-                    addReceiverGroup(groupName, receiverGroupIds, function () {
-                        receiverGroupController.view.render();
-                        receiverGroupController.view.reload();
-                    })
-                    $("input[name='groupName']").val('');
+
+
                 });
                 $('.button-right').on('click', () => {
                     let option = $('.select-people_0').find("option:selected");

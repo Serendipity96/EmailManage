@@ -1,51 +1,30 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>管理界面</title>
-    <link rel="stylesheet" href="css/index.css">
+    <title>登录界面</title>
+    <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-<div class="sidebar">
-    <div class="logo">
-        <img src="./img/csust.png" alt="">
-    </div>
-    <ul id="siderBarTabs">
-        <li id="receiver" class="active">
-            <img src="./img/receive.png" alt="">
-            <span>接受者管理</span>
-        </li>
-        <li id="receiverGroup"><img src="./img/team.png" alt=""><span>接受组管理</span></li>
-        <li id="message"><img src="./img/message.png" alt=""><span>消息管理</span></li>
-        <li id="task"><img src="./img/publish.png" alt=""><span>发布任务</span></li>
-        <li id="emailSender"><img src="./img/email.png" alt=""><span>邮件发送器</span></li>
-        <li id="account"><img src="./img/manager.png" alt=""><span>管理员账户</span></li>
-        <li id="logout"><img src="./img/exit.png" alt=""><span>注销</span></li>
-    </ul>
-
-    <div class="author">
-        <p>长沙理工大学-软件1XX1班-XXX</p>
-    </div>
+<h1>邮 件 信 息 发 布 系 统</h1>
+<div class="container">
+    <h2 class="title">登 录</h2>
+        <div class="input-field">
+            <img src="./img/user.png" alt="">
+            <h3 class="username">admin</h3>
+        </div>
+        <div class="input-field">
+            <img src="./img/password.png" alt="">
+            <input placeholder="密码" name="password" type="password">
+        </div>
+        <span class="btn-submit" id="submit">
+        <input type="submit"  value="登 录">
+    </span>
 </div>
-<div class="layout" id="layout"></div>
-
-
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="js/vendor/md5.min.js"></script>
 <script src="js/config.js"></script>
 <script src="js/manageSDK.js"></script>
-<script src="js/sideBar.js"></script>
-<script src="js/receiver.js"></script>
-<script src="js/receiverGroup.js"></script>
-<script src="js/message.js"></script>
-<script src="js/task.js"></script>
-<script src="js/emailSender.js"></script>
-<script src="js/account.js"></script>
-<script src="js/logout.js"></script>
-
-<script>
-    $('#receiver').click();
-</script>
-
+<script src="js/login.js"></script>
 </body>
 </html>

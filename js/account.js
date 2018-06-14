@@ -3,52 +3,28 @@ let accountController = {
         el: '.account-layout',
         template: `
             <div class="addAccount">
-        <h2>管理员账号</h2>
+        <h2>修改密码</h2>
+        <h3>admin，您好！</h3>
         <label class="label-first" for="">
-            用户名
+            原密码
             <input type="hidden" name="id">
-            <input name="username" type="text">
+            <input name="oldPwd" type="password">
         </label>
         <label for="">
-            密码
-            <input name="password" type="password">
+            新密码
+            <input name="newPwd" type="password">
         </label>
         <label for="">
             确认密码
-            <input name="confirmPassword" type="password">
+            <input name="confirmPwd" type="password">
         </label>
-        <input id="accountButton" onclick="addAccountItem(this)" class="button" value="添加" type="submit">
-        <input style="display: none" id="accountConfirm" onclick="confirmAccount(this)" class="button" value="确认" type="submit">
+        <input id="accountButton" onclick="editPwd(this)" class="button" value="修改" type="submit">
     </div>
-            <div class="accountContent">
-        <table>
-            <thead>
-            <tr>
-                <th class="name-td">用户名</th>
-                <th class="operate-td">操作</th>
-            </tr>
-            </thead>
-            <tbody id="account-tbody"></tbody>
-        </table>
-    </div>
+
         `,
         render() {
             let $el = $(this.el);
             $el.html(this.template);
-        },
-        reload() {
-            accountList(function (list) {
-                $('#account-tbody').empty();
-                list.map((result) => {
-                    $('#account-tbody').append(`
-                    <tr>
-                         <td hidden>${result.id}</td>
-                         <td>${result.username}</td>
-                         <td><span class="edit" onclick="editAccount(this)">修改</span>/<span class="delete" onclick="deleteAccountTr(${result.id})">删除</span></td>
-                    </tr>
-                    `)
-                })
-            });
         }
     },
     model: {},
@@ -57,7 +33,6 @@ let accountController = {
             this.view = view;
             this.model = model;
             this.view.render(this.model);
-            this.view.reload();
         }
     },
     init() {
@@ -65,76 +40,43 @@ let accountController = {
     }
 }
 
-function addAccountItem(edit) {
-    let username = $("input[name='username']").val();
-    let password = $("input[name='password']").val();
-    let confirmPassword = $("input[name='confirmPassword']").val();
+function editPwd(edit) {
+    let id = 1;
+    let oldPwd = $("input[name='oldPwd']").val();
+    let newPwd = $("input[name='newPwd']").val();
+    let confirmPwd = $("input[name='confirmPwd']").val();
+    let username = 'admin';
 
-    if (password !== '' && confirmPassword !== '') {
-        if (password === confirmPassword) {
-            let hashPwd = md5(password);
-            addAccount(username, hashPwd, function (data) {
-                $("input[type='text']").val('');
-                $("input[type='password']").val('');
-                accountController.view.reload();
-            });
-        } else {
+    if (oldPwd === '') {
+        alert('请输入原密码')
+    } else if (newPwd === '') {
+        alert('密码不能为空');
+    } else if (confirmPwd === '') {
+        alert('请确认密码');
+    } else if (newPwd !== '' && confirmPwd !== '') {
+        if (newPwd === confirmPwd) {
+            let oldHashPwd = md5(oldPwd);
+            login(username, oldHashPwd, function (data) {
+                if (data.status === 400) {
+                    alert(data.errMsg)
+                    $("input[type='password']").val('');
+                } else {
+                    let newHashPwd = md5(newPwd);
+                    modifyAccount(id, username, newHashPwd, function (data) {
+                        accountController.view.render();
+                        alert('修改成功！')
+                    });
+                }
+            })
+        }
+        else {
             alert('两次密码不一致');
             $("input[type='password']").val('');
         }
-    } else if (password !== '') {
-        alert('密码不能为空');
-    } else if (confirmPassword !== '') {
-        alert('请确认密码');
-    } else if (password === ''&& confirmPassword === '') {
-        alert('请输入密码');
     }
 }
 
-function deleteAccountTr(id) {
-    deleteAccount(id, function (data) {
-        accountController.view.reload();
-    });
-}
 
-function editAccount(edit) {
-    $("#accountButton").hide();
-    $("#accountConfirm").show();
-    let id = edit.parentNode.parentNode.children[0].textContent;
-    accountList(function (list) {
-        list.forEach((result) => {
-            if (result.id == id) {
-                $("input[name='id']").val(result.id);
-                $("input[name='username']").val(result.username);
-                $("input[name='password']").val(result.password);
-            }
-        })
-    })
-}
 
-function confirmAccount(edit) {
-    let id = $("input[name='id']").val();
-    let username = $("input[name='username']").val();
-    let password = $("input[name='password']").val();
-    let confirmPassword = $("input[name='confirmPassword']").val();
 
-    if (password !== '' && confirmPassword !== '') {
-        if (password === confirmPassword) {
-            let hashPwd = md5(password);
-            modifyAccount(id, username, hashPwd, function (data) {
-                accountController.view.render();
-                accountController.view.reload();
-            });
-        } else {
-            alert('两次密码不一致');
-            $("input[type='password']").val('');
-        }
-    } else if (password === '') {
-        alert('密码不能为空');
-    } else if (confirmPassword === '') {
-        alert('请确认密码');
-    } else if (password === ''&& confirmPassword === '') {
-        alert('请输入密码');
-    }
 
-}

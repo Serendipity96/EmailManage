@@ -77,9 +77,13 @@ ul li span {
 .message-layout h2,
 .task-layout h2,
 .emailSender-layout h2,
-.addAccount h2 {
+.addAccount h2{
     margin: 50px 0 30px 50px;
     font-weight: lighter;
+}
+.addAccount h3{
+    margin: 50px 0 30px 50px;
+    font-weight: normal;
 }
 
 .receiver-layout label,
@@ -121,7 +125,9 @@ ul li span {
     cursor: pointer;
     font-size: 14px;
 }
-
+.account-layout input[type=submit]{
+    margin: 0 20px;
+}
 .receiver-layout input[type=submit]:hover,
 .receiverGroup-layout input[type=submit]:hover,
 .message-layout input[type=submit]:hover,
@@ -160,8 +166,7 @@ ul li span {
 .addReceiver,
 .manageGroup,
 .addMessage,
-.publishTask,
-.addAccount {
+.publishTask{
     padding-bottom: 40px;
     border-bottom: 1px solid #ccc;
 }
@@ -197,8 +202,7 @@ ul li span {
 .receiverContent td,
 .messageContent td,
 .taskContent td,
-.emailSenderContent td,
-.accountContent td {
+.emailSenderContent td{
     padding: 10px 0;
     border-bottom: 1px solid #ccc;
 }
