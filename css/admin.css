@@ -77,11 +77,12 @@ ul li span {
 .message-layout h2,
 .task-layout h2,
 .emailSender-layout h2,
-.addAccount h2{
+.addAccount h2 {
     margin: 50px 0 30px 50px;
     font-weight: lighter;
 }
-.addAccount h3{
+
+.addAccount h3 {
     margin: 50px 0 30px 50px;
     font-weight: normal;
 }
@@ -125,9 +126,11 @@ ul li span {
     cursor: pointer;
     font-size: 14px;
 }
-.account-layout input[type=submit]{
+
+.account-layout input[type=submit] {
     margin: 0 20px;
 }
+
 .receiver-layout input[type=submit]:hover,
 .receiverGroup-layout input[type=submit]:hover,
 .message-layout input[type=submit]:hover,
@@ -166,7 +169,7 @@ ul li span {
 .addReceiver,
 .manageGroup,
 .addMessage,
-.publishTask{
+.publishTask {
     padding-bottom: 40px;
     border-bottom: 1px solid #ccc;
 }
@@ -177,6 +180,7 @@ ul li span {
 .emailSenderContent,
 .accountContent {
     margin: 50px;
+    position: relative;
 }
 
 .receiverContent .name-td, .email-td, .operate-td,
@@ -202,7 +206,7 @@ ul li span {
 .receiverContent td,
 .messageContent td,
 .taskContent td,
-.emailSenderContent td{
+.emailSenderContent td {
     padding: 10px 0;
     border-bottom: 1px solid #ccc;
 }
@@ -237,6 +241,27 @@ ul li span {
 .taskContent td .delete:hover,
 .accountContent td .delete:hover {
     color: #e55c5c;
+}
+
+.receiverContent .page-container {
+    position: absolute;
+    left: 770px;
+    top: 320px;
+    font-size: 0;
+}
+
+.receiverContent .page-container .page-item {
+    border: 1px solid #1989FA;
+    border-radius: 5px;
+    padding: 4px 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 8px;
+}
+
+.receiverContent .page-container .page-item:hover {
+    background: #1989FA;
+    color: white;
 }
 
 .label-container {

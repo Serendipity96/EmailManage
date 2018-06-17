@@ -1,5 +1,7 @@
 let receiverController = {
     view: {
+        page: 0,
+        length: 0,
         el: '.receiver-layout',
         template: `
         <div class="addReceiver">
@@ -26,6 +28,10 @@ let receiverController = {
                 <tbody id = "tdbody">
                 </tbody>
             </table>
+            <div class="page-container">
+                <span class="page-item" onclick="beforePage()">上一页</span>
+                <span class="page-item" onclick="afterPage()">下一页</span>
+            </div>
         </div>
         `,
         render(data) {
@@ -33,10 +39,16 @@ let receiverController = {
             $el.html(this.template);
         },
         reload() {
+            let page = this.page;
+            let pageStart = page * 5;
+            let pageEnd = page * 5 + 4;
+            let t = this;
             receiverList(function (list) {
                 $('#tdbody').empty();
-                list.map((result) => {
-                    $('#tdbody').append(`
+                t.length = list.length;
+                list.forEach((result, index) => {
+                    if (index <= pageEnd && index >= pageStart) {
+                        $('#tdbody').append(`
                     <tr>
                         <td style="display: none">${result.id}</td>
                         <td class="nameField">${result.name}</td>
@@ -44,6 +56,7 @@ let receiverController = {
                         <td><span style="display: none" class="confirm" onclick="confirm(this)">确认</span><span class="edit" onclick="editReceiver(this)">修改</span><span class="delete" onclick="deleteReceiverTr(${result.id})" >/删除</span></td>
                     </tr>
                     `);
+                    }
                 })
             });
         }
@@ -58,7 +71,6 @@ let receiverController = {
         init(view, model) {
             view.render(model);
             view.reload();
-
         }
 
     },
@@ -67,16 +79,39 @@ let receiverController = {
     }
 }
 
+function beforePage() {
+    let page = receiverController.view.page;
+    if (page === 0) {
+        alert('当前已是最前页')
+    } else if (page > 0) {
+        receiverController.view.page--;
+        receiverController.view.reload();
+    }
+
+}
+
+function afterPage() {
+    let page = receiverController.view.page;
+    let len = receiverController.view.length;
+    if(Math.floor(len/5) === page){
+        alert('当前已是最后一页')
+    }else{
+        receiverController.view.page++;
+        receiverController.view.reload();
+    }
+
+}
+
 function addReceiverItem(edit) {
     let name = $("input[name='name']").val();
     let email = $("input[name='email']").val();
-    if(name === ''){
+    if (name === '') {
         alert('姓名不能为空')
-    }else if (email === ''){
+    } else if (email === '') {
         alert('Email不能为空')
-    }else if(email.indexOf("@") === -1){
+    } else if (email.indexOf("@") === -1) {
         alert('Email不合法')
-    }else {
+    } else {
         addReceiver(name, email, function (data) {
             $("input[type='text']").val('');
             receiverController.view.reload();
@@ -89,7 +124,6 @@ function deleteReceiverTr(id) {
         receiverController.view.reload();
     });
 }
-
 
 function editReceiver(edit) {
     edit.parentNode.firstChild.style.display = 'block';
